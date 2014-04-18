@@ -34,5 +34,6 @@ namespace IcbmikeBlag.Controllers
             };
             return View(homeModel);
         }
-	}
+
+    }
 }
