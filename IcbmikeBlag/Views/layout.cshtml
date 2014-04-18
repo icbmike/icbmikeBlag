@@ -1,0 +1,23 @@
+﻿@using System.Web.Optimization
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    
+    @Styles.Render("main_styles")
+
+</head>
+<body>
+    
+    <div id="content">
+        @RenderBody()
+    </div>
+    
+    
+    @Scripts.Render("jquery")
+    @Scripts.Render("main_js")
+</body>
+</html>
