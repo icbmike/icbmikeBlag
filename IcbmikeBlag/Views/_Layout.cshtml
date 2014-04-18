@@ -7,17 +7,21 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     
-    @Styles.Render("main_styles")
+    @Styles.Render("~/styles/main")
 
 </head>
 <body>
     
+    
+
     <div id="content" class="tron-border tron-boxshadow">
+        @Html.Partial("_Navbar")
+        
         @RenderBody()
     </div>
     
     
-    @Scripts.Render("jquery")
-    @Scripts.Render("main_js")
+    @Scripts.Render("~/js/jquery")
+    @Scripts.Render("~/js/main")
 </body>
 </html>
