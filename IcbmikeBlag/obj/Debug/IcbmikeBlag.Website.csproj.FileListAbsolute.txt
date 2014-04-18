@@ -23,3 +23,5 @@ C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag\bin\System.Web.WebPages.R
 C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag\obj\Debug\IcbmikeBlag.Website.csprojResolveAssemblyReference.cache
 C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag\obj\Debug\IcbmikeBlag.dll
 C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag\obj\Debug\IcbmikeBlag.pdb
+C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag\bin\IcbmikeBlag.Application.dll
+C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag\bin\IcbmikeBlag.Application.pdb

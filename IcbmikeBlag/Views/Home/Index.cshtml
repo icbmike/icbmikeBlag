@@ -5,4 +5,7 @@
     Layout = "~/Views/layout.cshtml";
 }
 
-<h2>ICBMike Blag</h2>
+@foreach (var post in Model.Posts)
+{
+    Html.RenderPartial("_Post", post);
+}
