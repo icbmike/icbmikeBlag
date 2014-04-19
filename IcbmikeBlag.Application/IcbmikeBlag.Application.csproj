@@ -49,13 +49,34 @@
     <Compile Include="DAL\BlagContext.cs" />
     <Compile Include="Entities\BlogPost.cs" />
     <Compile Include="Entities\Comment.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="LoremIpsum.cs" />
+    <Compile Include="Migrations\201404190644084_InitialCreate.cs" />
+    <Compile Include="Migrations\201404190644084_InitialCreate.Designer.cs">
+      <DependentUpon>201404190644084_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201404191053276_AddUserEntity.cs" />
+    <Compile Include="Migrations\201404191053276_AddUserEntity.Designer.cs">
+      <DependentUpon>201404191053276_AddUserEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BlogPostRepository.cs" />
     <Compile Include="Repositories\IBlogPostRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201404190644084_InitialCreate.resx">
+      <DependentUpon>201404190644084_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201404191053276_AddUserEntity.resx">
+      <DependentUpon>201404191053276_AddUserEntity.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
