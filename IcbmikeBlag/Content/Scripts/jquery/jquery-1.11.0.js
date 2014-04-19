@@ -9305,7 +9305,7 @@ jQuery.extend({
 			jqXHR.status = status;
 			jqXHR.statusText = ( nativeStatusText || statusText ) + "";
 
-			// Success/Error
+			// HasErrors/Error
 			if ( isSuccess ) {
 				deferred.resolveWith( callbackContext, [ success, statusText, jqXHR ] );
 			} else {

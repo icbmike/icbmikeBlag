@@ -11,6 +11,11 @@
         
     @using (Html.BeginForm("Login", "Admin", FormMethod.Post))
     {
+        if (Model.HasErrors)
+        {
+            <span class="error">Failed attempt to login</span>
+        }
+        
         <fieldset>
             <div>
                 @Html.LabelFor(model => model.Username)
@@ -23,6 +28,6 @@
             </div>
         </fieldset>
         
-        <input type="submit" value="Log in"/>
+        <input type="submit" value="Log in" class="button"/>
     }
 </div>
