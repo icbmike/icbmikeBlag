@@ -65,9 +65,8 @@ namespace IcbmikeBlag.Application.Entities
             var saltBytes = new byte[128];
             random.NextBytes(saltBytes);
 
-            var encoding = new UTF8Encoding();
-
-            return encoding.GetString(saltBytes);
+            return saltBytes.Aggregate("",
+                (current, hexDigit) => current + hexDigit.ToString("X2", CultureInfo.InvariantCulture.NumberFormat));
         }
     }
 }
