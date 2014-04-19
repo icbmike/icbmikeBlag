@@ -3,10 +3,10 @@
     @using(Html.BeginForm("Index", "Search", FormMethod.Get)){
 
         <ul>
-            <li class="tron-border tron-text">@Html.ActionLink("Home", "Index", "Home")</li>
-            <li class="tron-border tron-text">@Html.ActionLink("Archive", "Index", "Archive")</li>
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("Archive", "Index", "Archive")</li>
         
         </ul>
-        <input class="search tron-border" type="text" name="searchterm" placeholder="Search..." />
+        <input class="search" type="text" name="searchterm" placeholder="Search..." />
     }
 </div>

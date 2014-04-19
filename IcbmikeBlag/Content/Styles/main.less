@@ -16,6 +16,10 @@ a:link, a:visited, a:hover, a:active{
     text-decoration: none;
 }
 
+fieldset{
+    border:none;
+}
+
 #content {
     position: relative;
     margin-left: auto;
@@ -25,32 +29,46 @@ a:link, a:visited, a:hover, a:active{
     padding-left: 30px;
     padding-right: 30px;
     padding-top:15px;
+
+    .tron-boxshadow;
+    &:hover{
+        .tron-boxshadow-hover;
+    }
 }
 
 .tron-boxshadow {
+    -moz-transition: box-shadow 1s ease;
+    -o-transition: box-shadow 1s ease;
+    -webkit-transition: box-shadow 1s ease;
     transition: box-shadow 1s ease;
     box-shadow: 0px 11px 22px 6px rgba(255, 255, 255, 0.75);
-
-    &:hover, &:focus {
-        box-shadow: 0px 11px 22px 6px rgba(50, 122, 138, 0.75);
-    }
 }
 
+.tron-boxshadow-hover{
+    box-shadow: 0px 11px 22px 6px rgba(50, 122, 138, 0.75);
+}
+
+
 .tron-border {
+    -moz-transition: border-color 1s ease;
+    -o-transition: border-color 1s ease;
+    -webkit-transition: border-color 1s ease;
     transition: border-color 1s ease;
     border-color: rgba(255, 255, 255, 0.75);
+}
 
-    &:hover, &:focus {
-        border-color: rgba(50,122,138, 0.75);
-    }
+.tron-border-hover{
+    border-color: rgba(50,122,138, 0.75);
 }
 
 .tron-text {
+    -moz-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+    -webkit-transition: color 0.5s ease;
     transition: color 0.5s ease;
-
-    &:hover, &:focus {
-        color: rgba(50,122,138, 0.75);
-    }
+}
+.tron-text-hover{
+    color: rgba(50,122,138, 0.75);
 }
 
 .blog-post {
@@ -63,7 +81,7 @@ a:link, a:visited, a:hover, a:active{
 #navbar {
     border-bottom: 1px solid white;
     padding-bottom: 7px;
-    
+    margin-bottom: 20px;
     & ul {
         list-style: none;
         display: inline-block;
@@ -75,6 +93,17 @@ a:link, a:visited, a:hover, a:active{
             text-align: center;
             vertical-align: middle;
             padding-top: 3px;
+            .tron-border;
+            &:hover{
+                .tron-border-hover;
+            }
+            & a{
+                .tron-text;
+                &:hover{
+                .tron-text-hover;
+                    
+                }
+            }
         }
     }
     & .search{
@@ -84,5 +113,65 @@ a:link, a:visited, a:hover, a:active{
         color:white;
         padding:3px;
         border-style:solid;
+        .tron-border;
+        .tron-text;
+        &:hover{
+            .tron-border-hover;
+            .tron-text-hover;
+        }
     }
+
+}
+
+.login-box{
+    margin: 30px auto 0px auto;
+    position:relative;
+    border: 1px solid;
+    width: 250px;
+    padding: 20px;
+    padding-bottom:50px;
+    .tron-border;
+
+    &:hover{
+        .tron-border-hover;
+    }
+
+    & div{
+        margin-bottom: 10px;
+        & label{
+            display: inline-block;
+            width: 85px;
+            .tron-text;
+            &:hover{
+                .tron-text-hover;
+            }
+        }
+        & input {
+            background-color: black;
+            color:white;
+            padding:3px;
+            border: 1px solid;
+            .tron-border;
+            &:hover{
+                .tron-border-hover
+            }
+        }
+    }
+    & input[type=submit]:extend(.tron-border){
+        float:right;
+        display: inline-block;
+        width: 80px;
+        height: 30px;
+        background-color: black;
+        border: 1px solid;
+        color: white;
+        cursor:pointer;
+        .tron-border;
+        .tron-text;
+        &:hover{
+            .tron-border-hover;
+            .tron-text-hover;
+        }
+    }
+    
 }
