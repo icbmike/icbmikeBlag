@@ -24,12 +24,21 @@ namespace IcbmikeBlag.Controllers
         {
             var homeModel = new HomeModel()
             {
-                Posts = _postRepository.GetRecentBlogPosts().Select(post => new PostModel()
-                {
-                    Title = post.Title,
-                    Content = post.Content, // This would be where we would transform markdown
-                    DatePosted = post.DatePosted
-                })
+                Posts = new List<PostModel>(){
+                    new PostModel()
+                    {
+                        Content = new LoremIpsum().GenerateIpsum(5),
+                        Title = "First Post",
+                        DatePosted = DateTime.Now
+                    },
+                    new PostModel()
+                    {
+                        Content = new LoremIpsum().GenerateIpsum(3),
+                        Title = "Second Post",
+                        DatePosted = DateTime.Now.AddDays(1)
+                    }
+                
+                }.OrderByDescending(model => model.DatePosted)
             };
             return View(homeModel);
         }
