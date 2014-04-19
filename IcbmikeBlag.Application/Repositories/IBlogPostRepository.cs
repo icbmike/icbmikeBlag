@@ -9,5 +9,6 @@ namespace IcbmikeBlag.Application.Repositories
     public interface IBlogPostRepository
     {
         IEnumerable<BlogPost> GetRecentBlogPosts(int numPosts = 10, int page = 1);
+        void AddPost(BlogPost blogPost);
     }
 }

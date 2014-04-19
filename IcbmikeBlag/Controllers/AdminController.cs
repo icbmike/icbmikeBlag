@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using IcbmikeBlag.Application.Entities;
 using IcbmikeBlag.Application.Repositories;
 using IcbmikeBlag.Models.Admin;
 
@@ -59,7 +60,14 @@ namespace IcbmikeBlag.Controllers
         [HttpPost]
         public ActionResult CreatePost(CreatePostModel model)
         {
-            return View(model);
+            _postRepository.AddPost(new BlogPost()
+            {
+                Content = model.Content,
+                Title = model.Title,
+                DatePosted = model.DatePosted
+            });
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }

@@ -21,5 +21,11 @@ namespace IcbmikeBlag.Application.Repositories
                 .Skip((page - 1)*numPosts)
                 .Take(numPosts).ToList();
         }
+
+        public void AddPost(BlogPost blogPost)
+        {
+            _dbContext.BlogPosts.Add(blogPost);
+            _dbContext.SaveChanges();
+        }
     }
 }
