@@ -1,0 +1,32 @@
+﻿@model IcbmikeBlag.Models.Admin.CreatePostModel
+
+@{
+    ViewBag.Title = "Create New Post";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h2>Create New Post</h2>
+
+<div class="post-editor">
+    
+
+    @using (Html.BeginForm("CreatePost", "Admin", FormMethod.Post))
+    {
+        <div>
+            @Html.LabelFor(model => model.Title)
+            @Html.TextBoxFor(model => model.Title, new {@class="title"})
+            
+            @Html.LabelFor(model => model.DatePosted)
+            @Html.TextBoxFor(model => model.DatePosted)
+        </div>
+        
+        @Html.TextAreaFor(model => model.Content, new{@class="content"})
+
+        <div>
+             @Html.LabelFor(model => model.Tags)
+            @Html.TextBoxFor(model => model.Tags, new{@class="tags"})
+            <input type="submit" value="Post" class="button"/>
+        </div>
+    }
+
+</div>

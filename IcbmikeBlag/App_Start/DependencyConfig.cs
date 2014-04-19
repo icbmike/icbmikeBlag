@@ -20,6 +20,7 @@ namespace IcbmikeBlag
 
             //Repositories
             builder.RegisterType<BlogPostRepository>().As<IBlogPostRepository>();
+            builder.RegisterType<UserRepository>().As<IUserRepository>();
             
 
             DependencyResolver.SetResolver(new AutofacDependencyResolver(builder.Build()));
