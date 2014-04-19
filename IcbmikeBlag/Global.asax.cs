@@ -1,6 +1,9 @@
-﻿using System.Web.Mvc;
+﻿using System.Data.Entity;
+using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using IcbmikeBlag.Application.DAL;
+using IcbmikeBlag.Application;
 
 namespace IcbmikeBlag
 {
@@ -16,6 +19,7 @@ namespace IcbmikeBlag
 
             DependencyConfig.RegisterDepencies();
 
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<BlagContext, Application.Migrations.Configuration>());
         }
     }
 }
