@@ -1,5 +1,0 @@
-C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag.Application\bin\Debug\IcbmikeBlag.Application.dll
-C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag.Application\bin\Debug\IcbmikeBlag.Application.pdb
-C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag.Application\obj\Debug\IcbmikeBlag.Application.csprojResolveAssemblyReference.cache
-C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag.Application\obj\Debug\IcbmikeBlag.Application.dll
-C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag.Application\obj\Debug\IcbmikeBlag.Application.pdb
