@@ -3,3 +3,8 @@ C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag.Application\bin\Debug\Icb
 C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag.Application\obj\Debug\IcbmikeBlag.Application.csprojResolveAssemblyReference.cache
 C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag.Application\obj\Debug\IcbmikeBlag.Application.dll
 C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag.Application\obj\Debug\IcbmikeBlag.Application.pdb
+C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag.Application\bin\Debug\IcbmikeBlag.Application.dll.config
+C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag.Application\bin\Debug\EntityFramework.dll
+C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag.Application\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag.Application\bin\Debug\EntityFramework.xml
+C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag.Application\bin\Debug\EntityFramework.SqlServer.xml

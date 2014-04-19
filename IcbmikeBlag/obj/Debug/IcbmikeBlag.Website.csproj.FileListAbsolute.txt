@@ -31,3 +31,11 @@ C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag\bin\System.Web.Http.WebHo
 C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag\bin\System.Net.Http.Formatting.xml
 C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag\bin\System.Web.Http.xml
 C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag\bin\System.Web.Http.WebHost.xml
+C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag\bin\Autofac.dll
+C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag\bin\Autofac.Integration.Mvc.dll
+C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag\bin\Autofac.xml
+C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag\bin\Autofac.Integration.Mvc.xml
+C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag\bin\EntityFramework.dll
+C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag\bin\EntityFramework.SqlServer.dll
+C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag\bin\EntityFramework.xml
+C:\Users\Mike\Documents\GitHub\icbmikeBlag\IcbmikeBlag\bin\EntityFramework.SqlServer.xml
