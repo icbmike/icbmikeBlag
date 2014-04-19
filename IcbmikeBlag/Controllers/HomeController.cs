@@ -4,12 +4,20 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using IcbmikeBlag.Application;
+using IcbmikeBlag.Application.Repositories;
 using IcbmikeBlag.Models.Home;
 
 namespace IcbmikeBlag.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IBlogPostRepository _postRepository;
+
+        public HomeController(IBlogPostRepository postRepository)
+        {
+            _postRepository = postRepository;
+        }
+
         //
         // GET: /Home/
         public ActionResult Index()
