@@ -1,33 +1,12 @@
-﻿@model IcbmikeBlag.Models.Admin.LoginModel
+﻿@model dynamic
 
 @{
-    ViewBag.Title = "Admin";
+    ViewBag.Title = "Admin HUb";
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<h2>Admin</h2>
+<h2>Admin HUb</h2>
 
-<div class="login-box">
-        
-    @using (Html.BeginForm("Login", "Admin", FormMethod.Post))
-    {
-        if (Model.HasErrors)
-        {
-            <span class="error">Failed attempt to login</span>
-        }
-        
-        <fieldset>
-            <div>
-                @Html.LabelFor(model => model.Username)
-                @Html.TextBoxFor(model => model.Username)
-            </div>
-            
-            <div>
-                @Html.LabelFor(model => model.Password)
-                @Html.PasswordFor(model => model.Password)
-            </div>
-        </fieldset>
-        
-        <input type="submit" value="Log in" class="button"/>
-    }
+<div class="admin-hub">
+    @Html.ActionLink("Create new post", "CreatePost", "Admin")
 </div>
