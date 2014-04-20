@@ -1,9 +1,9 @@
 ﻿
 <div id="navbar">
-    @using(Html.BeginForm("Index", "Search", FormMethod.Get)){
+    @using(Html.BeginForm("Search", "Post", FormMethod.Get)){
 
         <ul>
-            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("Home", "Search", "Post")</li>
             <li>@Html.ActionLink("Archive", "Index", "Archive")</li>
             @if (Request.IsAuthenticated)
             {

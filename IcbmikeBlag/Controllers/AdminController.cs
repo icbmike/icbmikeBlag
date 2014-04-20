@@ -71,7 +71,7 @@ namespace IcbmikeBlag.Controllers
                 DatePosted = model.DatePosted
             });
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Search", "Post");
         }
 
         public ActionResult ChangeUser()

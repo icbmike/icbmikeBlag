@@ -1,0 +1,18 @@
+﻿@model IcbmikeBlag.Models.Home.PostModel
+
+<div class="blog-post">
+    <span class="title">@Model.Title</span><span class="date-posted">@Model.DatePosted.ToShortDateString() @Model.DatePosted.ToShortTimeString()</span>
+    
+    <p class="content">
+        @Model.Content
+    </p>
+    
+    <div class="post-footer">
+        @foreach (var tag in Model.Tags)
+        {
+            @Html.ActionLink(tag, "TaggedWith", "Post", new {tag = tag}, new{@class="tag"});
+        }
+        
+        @Html.ActionLink("Comments", "Post", "Post", new {id = Model.ID}, new{@class="comments-link"})
+    </div>
+</div>
