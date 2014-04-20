@@ -16,7 +16,7 @@ a:link, a:visited, a:hover, a:active{
     text-decoration: none;
 }
 
-fieldset{
+fieldset, hr{
     border:none;
 }
 
@@ -72,10 +72,53 @@ fieldset{
 }
 
 .blog-post {
-    border-bottom: 1px solid;
-    border-top: 1px solid;
+    border: 1px solid;
     padding: 10px;
     margin-top: 10px;
+    .tron-border;
+
+    .title, .date-posted{
+        margin-bottom: 10px;
+        display: inline-block;
+        .tron-text;
+        &:hover{
+            .tron-text-hover;
+        }
+    }
+    .date-posted{
+        float:right;
+    }
+
+    &:hover{
+        .tron-border-hover;
+    }
+    p{
+        border: 1px solid;
+        padding: 10px;
+        .tron-border;
+        &:hover{
+            .tron-border-hover;
+        }
+    }
+
+    .post-footer{
+        margin-top:10px;
+
+        .comments-link{
+            float:right;
+            .tron-text;
+            &:hover{
+                .tron-text-hover;
+            }
+        }
+
+        .tag{
+            .tron-text;
+            &:hover{
+                .tron-text-hover;
+            }
+        }
+    }
 }
 
 #navbar {
@@ -224,4 +267,22 @@ button, input[type="submit"], input[type="button"]{
             .tron-border-hover;
             .tron-text-hover;
         }
+}
+
+.admin-hub fieldset{
+    border: 1px solid;
+    margin-top: 20px;
+    padding:10px;
+    .tron-border;
+    &:hover{
+        .tron-border-hover;
+    }
+
+    a {
+        display: block;
+        .tron-text;
+        &:hover{
+            .tron-text-hover;
+        }
+    }
 }

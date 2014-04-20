@@ -14,7 +14,8 @@ a:active {
   color: #aaaaaa;
   text-decoration: none;
 }
-fieldset {
+fieldset,
+hr {
   border: none;
 }
 #content {
@@ -65,10 +66,67 @@ fieldset {
   color: rgba(50, 122, 138, 0.75);
 }
 .blog-post {
-  border-bottom: 1px solid;
-  border-top: 1px solid;
+  border: 1px solid;
   padding: 10px;
   margin-top: 10px;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+.blog-post .title,
+.blog-post .date-posted {
+  margin-bottom: 10px;
+  display: inline-block;
+  -moz-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+.blog-post .title:hover,
+.blog-post .date-posted:hover {
+  color: rgba(50, 122, 138, 0.75);
+}
+.blog-post .date-posted {
+  float: right;
+}
+.blog-post:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+.blog-post p {
+  border: 1px solid;
+  padding: 10px;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+.blog-post p:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+.blog-post .post-footer {
+  margin-top: 10px;
+}
+.blog-post .post-footer .comments-link {
+  float: right;
+  -moz-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+.blog-post .post-footer .comments-link:hover {
+  color: rgba(50, 122, 138, 0.75);
+}
+.blog-post .post-footer .tag {
+  -moz-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+.blog-post .post-footer .tag:hover {
+  color: rgba(50, 122, 138, 0.75);
 }
 #navbar {
   border-bottom: 1px solid white;
@@ -252,5 +310,28 @@ button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover {
   border-color: rgba(50, 122, 138, 0.75);
+  color: rgba(50, 122, 138, 0.75);
+}
+.admin-hub fieldset {
+  border: 1px solid;
+  margin-top: 20px;
+  padding: 10px;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+.admin-hub fieldset:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+.admin-hub fieldset a {
+  display: block;
+  -moz-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+.admin-hub fieldset a:hover {
   color: rgba(50, 122, 138, 0.75);
 }
