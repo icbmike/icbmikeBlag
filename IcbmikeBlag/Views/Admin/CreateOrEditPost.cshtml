@@ -10,7 +10,7 @@
 <div class="post-editor">
     
 
-    @using (Html.BeginForm("CreatePost", "Admin", FormMethod.Post))
+    @using (Html.BeginForm("CreateOrEditPost", "Admin", FormMethod.Post))
     {
         <div>
             @Html.LabelFor(model => model.Title)

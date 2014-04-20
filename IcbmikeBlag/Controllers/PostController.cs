@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using IcbmikeBlag.Application;
 using IcbmikeBlag.Application.Repositories;
-using IcbmikeBlag.Models.Home;
+using IcbmikeBlag.Models.Post;
 using IcbmikeBlag.Models.Search;
 
 namespace IcbmikeBlag.Controllers
@@ -22,7 +20,7 @@ namespace IcbmikeBlag.Controllers
         //
         public ActionResult Index()
         {
-            var homeModel = new HomeModel()
+            var homeModel = new PostsModel()
             {
                 Posts = _postRepository.GetRecentBlogPosts().Select(post => new PostModel()
                 {
@@ -49,6 +47,11 @@ namespace IcbmikeBlag.Controllers
         }
 
         public ActionResult Post(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ActionResult Archive(int? year, int? month, int? day)
         {
             throw new NotImplementedException();
         }

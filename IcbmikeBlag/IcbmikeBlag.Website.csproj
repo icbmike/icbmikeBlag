@@ -144,11 +144,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\Models\Admin\CreatePostModel.cs" />
     <Compile Include="Controllers\AdminController.cs" />
-    <Compile Include="Controllers\ArchiveController.cs" />
     <Compile Include="App_Start\DependencyConfig.cs" />
     <Compile Include="Models\Admin\LoginModel.cs" />
-    <Compile Include="Models\Archive\ArchiveModel.cs" />
-    <Compile Include="Models\Post\HomeModel.cs" />
+    <Compile Include="Models\BlagModelBase.cs" />
+    <Compile Include="Models\Post\PostsModel.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Global.asax.cs">
@@ -168,7 +167,7 @@
     <Content Include="Views\Archive\Index.cshtml" />
     <Content Include="Views\Shared\_Navbar.cshtml" />
     <Content Include="Views\Admin\Login.cshtml" />
-    <Content Include="Views\Admin\CreatePost.cshtml" />
+    <Content Include="Views\Admin\CreateOrEditPost.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Post\Search.cshtml" />
     <None Include="Web.Debug.config">

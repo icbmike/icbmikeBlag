@@ -51,7 +51,7 @@ namespace IcbmikeBlag.Controllers
         }
 
         [Authorize]
-        public ActionResult CreatePost()
+        public ActionResult CreateOrEditPost(int? id)
         {
             var model = new CreatePostModel()
             {
@@ -62,7 +62,7 @@ namespace IcbmikeBlag.Controllers
 
         [Authorize]
         [HttpPost]
-        public ActionResult CreatePost(CreatePostModel model)
+        public ActionResult CreateOrEditPost(CreatePostModel model)
         {
             _postRepository.AddPost(new BlogPost()
             {
@@ -74,9 +74,11 @@ namespace IcbmikeBlag.Controllers
             return RedirectToAction("Search", "Post");
         }
 
+        [Authorize]
         public ActionResult ChangeUser()
         {
             throw new NotImplementedException();
         }
+
     }
 }
