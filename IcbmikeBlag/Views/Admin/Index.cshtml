@@ -5,8 +5,21 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<h2>Admin HUb</h2>
+<h2>Admin Hub</h2>
 
 <div class="admin-hub">
-    @Html.ActionLink("Create new post", "CreatePost", "Admin")
+    <fieldset>
+        <legend>Actions</legend>
+        @Html.ActionLink("Create new post", "CreatePost", "Admin")
+    
+        @Html.ActionLink("Change account deets", "ChangeUser", "Admin")
+    
+        <a href="#">Create User?</a>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Sick Stats</legend>
+
+    </fieldset>
+
 </div>

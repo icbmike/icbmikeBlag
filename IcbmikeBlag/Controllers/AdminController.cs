@@ -73,5 +73,10 @@ namespace IcbmikeBlag.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+
+        public ActionResult ChangeUser()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
