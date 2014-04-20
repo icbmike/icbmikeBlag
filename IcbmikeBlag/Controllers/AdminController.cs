@@ -21,11 +21,15 @@ namespace IcbmikeBlag.Controllers
             _userRepository = userRepository;
         }
 
-        //
-        // GET: /Admin/
-        public ActionResult Index(LoginModel model = null)
+        [Authorize]
+        public ActionResult Index()
         {
-            model = model ?? new LoginModel();
+            return View();
+        }
+
+        public ActionResult Login(bool hasErrors = false)
+        {
+            var model = new LoginModel(){HasErrors = hasErrors};
             return View(model);
         }
 
@@ -37,7 +41,7 @@ namespace IcbmikeBlag.Controllers
             //Credentials werent valid
             if (user == null)
             {
-                return RedirectToAction("Index", new LoginModel(){HasErrors = true});
+                return RedirectToAction("Login", new {hasErrors = true});
             }
 
             FormsAuthentication.SetAuthCookie(model.Username, false);
@@ -68,6 +72,11 @@ namespace IcbmikeBlag.Controllers
             });
 
             return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult ChangeUser()
+        {
+            throw new NotImplementedException();
         }
     }
 }

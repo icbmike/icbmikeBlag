@@ -254,3 +254,26 @@ input[type="button"]:hover {
   border-color: rgba(50, 122, 138, 0.75);
   color: rgba(50, 122, 138, 0.75);
 }
+.admin-hub fieldset {
+  border: 1px solid;
+  margin-top: 20px;
+  padding: 10px;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+.admin-hub fieldset:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+.admin-hub fieldset a {
+  display: block;
+  -moz-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+.admin-hub fieldset a:hover {
+  color: rgba(50, 122, 138, 0.75);
+}
