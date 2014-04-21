@@ -6,6 +6,12 @@ namespace IcbmikeBlag.Models.Admin
 {
     public class CreateOrEditPostModel : BlagModelBase
     {
+
+        public CreateOrEditPostModel()
+        {
+            Tags = new List<string>();
+        }
+
         public string Title { get; set; }
         
         public string Content { get; set; }

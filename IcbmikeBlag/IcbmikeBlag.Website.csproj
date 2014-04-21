@@ -142,6 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Models\Admin\AdminHubModel.cs" />
     <Compile Include="Models\Admin\CreateOrEditPostModel.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="App_Start\DependencyConfig.cs" />
