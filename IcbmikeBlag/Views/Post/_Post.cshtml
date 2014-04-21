@@ -13,10 +13,11 @@
             @Html.ActionLink(tag, "TaggedWith", "Post", new {tag = tag}, new{@class="tag"});
         }
         
+        @Html.ActionLink("Comments", "Post", "Post", new {id = Model.ID}, new{@class="comments-link"})
+
         @if (Model.IsAuthenticated)
         {
             @Html.ActionLink("Edit", "CreateOrEditPost", "Admin", new {id = Model.ID}, new {@class = "edit-link"})
         }
-        @Html.ActionLink("Comments", "Post", "Post", new {id = Model.ID}, new{@class="comments-link"})
     </div>
 </div>

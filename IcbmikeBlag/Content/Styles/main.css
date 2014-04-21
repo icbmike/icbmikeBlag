@@ -116,6 +116,7 @@ hr {
   -o-transition: color 0.5s ease;
   -webkit-transition: color 0.5s ease;
   transition: color 0.5s ease;
+  margin-right: 5px;
 }
 .blog-post .post-footer .comments-link:hover,
 .blog-post .post-footer .edit-link:hover {

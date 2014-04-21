@@ -23,8 +23,13 @@
         @Html.TextAreaFor(model => model.Content, new{@class="content"})
 
         <div>
-             @Html.LabelFor(model => model.Tags)
-            @Html.TextBoxFor(model => model.Tags, new{@class="tags"})
+            @Html.LabelFor(model => model.Tags)
+            @{
+                var csTags = string.Join(", ", Model.Tags);
+            }
+
+            @Html.TextBox("Tags", csTags, new{@class="tags"})
+            @Html.HiddenFor()
             <input type="submit" value="Post" class="button"/>
         </div>
     }
