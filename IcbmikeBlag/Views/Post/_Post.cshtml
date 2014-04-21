@@ -1,11 +1,19 @@
-﻿@model IcbmikeBlag.Models.Post.PostModel
+﻿@using WebGrease.Css.Extensions
+@model IcbmikeBlag.Models.Post.PostModel
 
 <div class="blog-post">
     <span class="title">@Model.Title</span><span class="date-posted">@Model.DatePosted.ToShortDateString() @Model.DatePosted.ToShortTimeString()</span>
     
-    <p class="content">
-        @Model.Content
-    </p>
+
+    <div class="content">
+        @foreach(var paragraph in Model.Content.Split(new []{ Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries))
+    {
+        <p>
+            @paragraph
+        </p>
+    }
+       
+    </div>
     
     <div class="post-footer">
         @foreach (var tag in Model.Tags)
