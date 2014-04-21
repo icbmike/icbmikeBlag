@@ -27,5 +27,22 @@ namespace IcbmikeBlag.Application.Repositories
             _dbContext.BlogPosts.Add(blogPost);
             _dbContext.SaveChanges();
         }
+
+        public void UpdatePost(BlogPost blogPost)
+        {
+            var post = _dbContext.BlogPosts.Find(blogPost.ID);
+            
+            //Update all the deets
+            post.Title = blogPost.Title;
+            post.Content = blogPost.Content;
+            post.DatePosted = blogPost.DatePosted;
+
+            _dbContext.SaveChanges();
+        }
+
+        public BlogPost GetPost(int value)
+        {
+            return _dbContext.BlogPosts.Find(value);
+        }
     }
 }

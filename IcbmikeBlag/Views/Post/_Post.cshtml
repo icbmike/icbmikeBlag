@@ -1,4 +1,4 @@
-﻿@model IcbmikeBlag.Models.Home.PostModel
+﻿@model IcbmikeBlag.Models.Post.PostModel
 
 <div class="blog-post">
     <span class="title">@Model.Title</span><span class="date-posted">@Model.DatePosted.ToShortDateString() @Model.DatePosted.ToShortTimeString()</span>
@@ -14,5 +14,10 @@
         }
         
         @Html.ActionLink("Comments", "Post", "Post", new {id = Model.ID}, new{@class="comments-link"})
+
+        @if (Model.IsAuthenticated)
+        {
+            @Html.ActionLink("Edit", "CreateOrEditPost", "Admin", new {id = Model.ID}, new {@class = "edit-link"})
+        }
     </div>
 </div>

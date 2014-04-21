@@ -1,11 +1,13 @@
-﻿
+﻿@model IcbmikeBlag.Models.BlagModelBase
+
 <div id="navbar">
     @using(Html.BeginForm("Search", "Post", FormMethod.Get)){
 
         <ul>
             <li>@Html.ActionLink("Home", "Index", "Post")</li>
-            <li>@Html.ActionLink("Archive", "Index", "Archive")</li>
-            @if (Request.IsAuthenticated)
+            <li>@Html.ActionLink("Archive", "Archive", "Post")</li>
+            
+            @if (Model.IsAuthenticated)
             {
                 <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
             }

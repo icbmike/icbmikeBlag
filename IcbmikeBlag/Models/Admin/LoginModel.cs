@@ -1,6 +1,6 @@
 ﻿namespace IcbmikeBlag.Models.Admin
 {
-    public class LoginModel
+    public class LoginModel : BlagModelBase
     {
         public string Username { get; set; }
         public string Password { get; set; }

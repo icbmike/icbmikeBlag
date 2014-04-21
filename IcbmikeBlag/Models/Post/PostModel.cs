@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 
-namespace IcbmikeBlag.Models.Home
+namespace IcbmikeBlag.Models.Post
 {
-    public class PostModel
+    public class PostModel : BlagModelBase
     {
         public int ID { get; set; }
 

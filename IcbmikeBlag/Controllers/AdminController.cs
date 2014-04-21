@@ -51,32 +51,74 @@ namespace IcbmikeBlag.Controllers
         }
 
         [Authorize]
-        public ActionResult CreatePost()
+        public ActionResult CreateOrEditPost(int? id)
         {
-            var model = new CreatePostModel()
+            CreateOrEditPostModel model;
+            
+            if (id.HasValue)
             {
-                DatePosted = DateTime.Now.Date
-            };
+                //Retrieve the post what the id is for
+                var blogPost = _postRepository.GetPost(id.Value);
+                
+                //Couldn't find it
+                if (blogPost == null)
+                {
+                    return HttpNotFound("Coudln't find the post with id " + id.Value);
+                }
+                
+                model = new CreateOrEditPostModel()
+                {
+                    ID = blogPost.ID,
+                    DatePosted = blogPost.DatePosted,
+                    Content = blogPost.Content,
+                    Title = blogPost.Title,
+                    Tags = new List<string>{"#hashtag"}
+                };
+            }
+            else
+            {
+                model = new CreateOrEditPostModel()
+                {
+                    DatePosted = DateTime.Now.Date
+                };
+            }
             return View(model);
         }
 
         [Authorize]
         [HttpPost]
-        public ActionResult CreatePost(CreatePostModel model)
+        public ActionResult CreateOrEditPost(CreateOrEditPostModel model)
         {
-            _postRepository.AddPost(new BlogPost()
+
+            //Create BlogPost to update/save
+            var blogPost = new BlogPost()
             {
                 Content = model.Content,
                 Title = model.Title,
                 DatePosted = model.DatePosted
-            });
+            };
 
-            return RedirectToAction("Search", "Post");
+            if (model.ID.HasValue)
+            {
+                //We were editing a post
+                blogPost.ID = model.ID.Value;
+                _postRepository.UpdatePost(blogPost);
+            }
+            else
+            {
+                //Createing a new one
+                _postRepository.AddPost(blogPost);
+            }
+
+            //Redirect to home page
+            return RedirectToAction("Index", "Post");
         }
 
+        [Authorize]
         public ActionResult ChangeUser()
         {
             throw new NotImplementedException();
         }
+
     }
 }

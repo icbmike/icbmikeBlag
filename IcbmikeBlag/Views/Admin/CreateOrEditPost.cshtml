@@ -1,4 +1,4 @@
-﻿@model IcbmikeBlag.Models.Admin.CreatePostModel
+﻿@model IcbmikeBlag.Models.Admin.CreateOrEditPostModel
 
 @{
     ViewBag.Title = "Create New Post";
@@ -10,7 +10,7 @@
 <div class="post-editor">
     
 
-    @using (Html.BeginForm("CreatePost", "Admin", FormMethod.Post))
+    @using (Html.BeginForm("CreateOrEditPost", "Admin", FormMethod.Post))
     {
         <div>
             @Html.LabelFor(model => model.Title)
@@ -23,8 +23,13 @@
         @Html.TextAreaFor(model => model.Content, new{@class="content"})
 
         <div>
-             @Html.LabelFor(model => model.Tags)
-            @Html.TextBoxFor(model => model.Tags, new{@class="tags"})
+            @Html.LabelFor(model => model.Tags)
+            @{
+                var csTags = string.Join(", ", Model.Tags);
+            }
+
+            @Html.TextBox("Tags", csTags, new{@class="tags"})
+            @Html.HiddenFor()
             <input type="submit" value="Post" class="button"/>
         </div>
     }
