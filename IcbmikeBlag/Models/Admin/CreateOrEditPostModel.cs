@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace IcbmikeBlag.Models.Admin
 {
-    public class CreatePostModel
+    public class CreateOrEditPostModel : BlagModelBase
     {
         public string Title { get; set; }
         
@@ -12,6 +13,7 @@ namespace IcbmikeBlag.Models.Admin
         [DisplayName("Date Posted")]
         public DateTime DatePosted { get; set; }
 
-        public string Tags { get; set; }
+        public IEnumerable<string> Tags { get; set; }
+        public int? ID { get; set; }
     }
 }

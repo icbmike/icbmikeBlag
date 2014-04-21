@@ -15,7 +15,7 @@
         
         @if (Model.IsAuthenticated)
         {
-            @Html.ActionLink("Edit", "EditPost", "Admin", new {id = Model.ID}, new {@class = "edit-link"})
+            @Html.ActionLink("Edit", "CreateOrEditPost", "Admin", new {id = Model.ID}, new {@class = "edit-link"})
         }
         @Html.ActionLink("Comments", "Post", "Post", new {id = Model.ID}, new{@class="comments-link"})
     </div>

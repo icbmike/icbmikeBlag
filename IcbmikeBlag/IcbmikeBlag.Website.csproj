@@ -142,7 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\Models\Admin\CreatePostModel.cs" />
+    <Compile Include="Models\Admin\CreateOrEditPostModel.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="App_Start\DependencyConfig.cs" />
     <Compile Include="Models\Admin\LoginModel.cs" />
