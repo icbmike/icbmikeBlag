@@ -5,7 +5,7 @@ using System.Web;
 
 namespace IcbmikeBlag.Models
 {
-    public class BlagModelBase
+    public abstract class BlagModelBase
     {
         public bool IsAuthenticated { get { return HttpContext.Current.Request.IsAuthenticated; } }
     }

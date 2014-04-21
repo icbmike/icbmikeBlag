@@ -24,7 +24,8 @@ namespace IcbmikeBlag.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            return View();
+            var model = new AdminHubModel();
+            return View(model);
         }
 
         public ActionResult Login(bool hasErrors = false)
