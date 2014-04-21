@@ -29,7 +29,7 @@
             }
 
             @Html.TextBox("Tags", csTags, new{@class="tags"})
-            @Html.HiddenFor()
+            @Html.HiddenFor(model => model.ID)
             <input type="submit" value="Post" class="button"/>
         </div>
     }
