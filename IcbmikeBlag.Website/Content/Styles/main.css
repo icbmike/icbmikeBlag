@@ -168,10 +168,10 @@ hr {
   border-color: rgba(50, 122, 138, 0.75);
   color: rgba(50, 122, 138, 0.75);
 }
-#navbar 2 form {
+#navbar form {
   float: right;
 }
-#navbar 2 form .search {
+#navbar form .search {
   background-color: black;
   color: white;
   padding: 3px;
@@ -186,7 +186,7 @@ hr {
   -webkit-transition: color 1s ease;
   transition: color 1s ease;
 }
-#navbar 2 form .search:hover {
+#navbar form .search:hover {
   border-color: rgba(50, 122, 138, 0.75);
   color: rgba(50, 122, 138, 0.75);
 }
