@@ -57,10 +57,10 @@ hr {
   border-color: rgba(50, 122, 138, 0.75);
 }
 .tron-text {
-  -moz-transition: color 0.5s ease;
-  -o-transition: color 0.5s ease;
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease;
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
 }
 .tron-text-hover {
   color: rgba(50, 122, 138, 0.75);
@@ -79,10 +79,10 @@ hr {
 .blog-post .date-posted {
   margin-bottom: 10px;
   display: inline-block;
-  -moz-transition: color 0.5s ease;
-  -o-transition: color 0.5s ease;
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease;
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
 }
 .blog-post .title:hover,
 .blog-post .date-posted:hover {
@@ -115,10 +115,10 @@ hr {
 .blog-post .post-footer .comments-link,
 .blog-post .post-footer .edit-link {
   float: right;
-  -moz-transition: color 0.5s ease;
-  -o-transition: color 0.5s ease;
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease;
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
   margin-right: 5px;
 }
 .blog-post .post-footer .comments-link:hover,
@@ -126,10 +126,10 @@ hr {
   color: rgba(50, 122, 138, 0.75);
 }
 .blog-post .post-footer .tag {
-  -moz-transition: color 0.5s ease;
-  -o-transition: color 0.5s ease;
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease;
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
 }
 .blog-post .post-footer .tag:hover {
   color: rgba(50, 122, 138, 0.75);
@@ -139,11 +139,7 @@ hr {
   padding-bottom: 7px;
   margin-bottom: 20px;
 }
-#navbar ul {
-  list-style: none;
-  display: inline-block;
-}
-#navbar ul li {
+#navbar a {
   display: inline-block;
   height: 27px;
   width: 80px;
@@ -156,37 +152,34 @@ hr {
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
   border-color: rgba(255, 255, 255, 0.75);
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
 }
-#navbar ul li:hover {
+#navbar a:hover {
   border-color: rgba(50, 122, 138, 0.75);
-}
-#navbar ul li a {
-  -moz-transition: color 0.5s ease;
-  -o-transition: color 0.5s ease;
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease;
-}
-#navbar ul li a:hover {
   color: rgba(50, 122, 138, 0.75);
 }
-#navbar .search {
-  position: relative;
+#navbar form {
   float: right;
+}
+#navbar form .search {
   background-color: black;
   color: white;
   padding: 3px;
-  border-style: solid;
+  border: 1px solid;
   -moz-transition: border-color 1s ease;
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
   border-color: rgba(255, 255, 255, 0.75);
-  -moz-transition: color 0.5s ease;
-  -o-transition: color 0.5s ease;
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease;
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
 }
-#navbar .search:hover {
+#navbar form .search:hover {
   border-color: rgba(50, 122, 138, 0.75);
   color: rgba(50, 122, 138, 0.75);
 }
@@ -212,10 +205,10 @@ hr {
 .login-box div label {
   display: inline-block;
   width: 85px;
-  -moz-transition: color 0.5s ease;
-  -o-transition: color 0.5s ease;
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease;
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
 }
 .login-box div label:hover {
   color: rgba(50, 122, 138, 0.75);
@@ -307,10 +300,10 @@ input[type="button"] {
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
   border-color: rgba(255, 255, 255, 0.75);
-  -moz-transition: color 0.5s ease;
-  -o-transition: color 0.5s ease;
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease;
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
 }
 button:hover,
 input[type="submit"]:hover,
@@ -333,10 +326,10 @@ input[type="button"]:hover {
 }
 .admin-hub fieldset a {
   display: block;
-  -moz-transition: color 0.5s ease;
-  -o-transition: color 0.5s ease;
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease;
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
 }
 .admin-hub fieldset a:hover {
   color: rgba(50, 122, 138, 0.75);
