@@ -61,7 +61,9 @@ namespace IcbmikeBlag.Controllers
 
         public ActionResult Error()
         {
-            return View("Error");
+            
+            var errorModel = new ErrorModel();
+            return View("Error", errorModel);
         }
     }
 }
