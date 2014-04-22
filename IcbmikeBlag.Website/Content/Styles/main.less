@@ -3,7 +3,6 @@
     padding: 0;
 }
 
-
 body {
     background-color: black;
     color: #aaaaaa;
@@ -20,7 +19,7 @@ fieldset, hr{
     border:none;
 }
 
-#content {
+#content, #content-error {
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -29,10 +28,18 @@ fieldset, hr{
     padding-left: 30px;
     padding-right: 30px;
     padding-top:15px;
+     .tron-boxshadow;
+   
+}
 
-    .tron-boxshadow;
-    &:hover{
+#content {
+    &:hover {
         .tron-boxshadow-hover;
+    }
+}
+#content-error {
+    &:hover {
+        .tron-boxshadow-error-hover;
     }
 }
 
@@ -47,6 +54,10 @@ fieldset, hr{
 .tron-boxshadow-hover{
     box-shadow: 0px 11px 22px 6px rgba(50, 122, 138, 0.75);
 }
+.tron-boxshadow-error-hover{
+    box-shadow: 0px 11px 22px 6px rgba(255, 20, 20, 0.75);
+}
+
 
 
 .tron-border {
@@ -62,10 +73,10 @@ fieldset, hr{
 }
 
 .tron-text {
-    -moz-transition: color 0.5s ease;
-    -o-transition: color 0.5s ease;
-    -webkit-transition: color 0.5s ease;
-    transition: color 0.5s ease;
+    -moz-transition: color 1s ease;
+    -o-transition: color 1s ease;
+    -webkit-transition: color 1s ease;
+    transition: color 1s ease;
 }
 .tron-text-hover{
     color: rgba(50,122,138, 0.75);
@@ -131,45 +142,41 @@ fieldset, hr{
     border-bottom: 1px solid white;
     padding-bottom: 7px;
     margin-bottom: 20px;
-    & ul {
-        list-style: none;
+
+    a {
         display: inline-block;
-        & li {
-            display: inline-block;
-            height: 27px;
-            width: 80px;
-            border: 1px solid;
-            text-align: center;
-            vertical-align: middle;
-            padding-top: 3px;
-            .tron-border;
-            &:hover{
-                .tron-border-hover;
-            }
-            & a{
-                .tron-text;
-                &:hover{
-                .tron-text-hover;
-                    
-                }
-            }
-        }
-    }
-    & .search{
-        position:relative;
-        float:right;
-        background-color: black;
-        color:white;
-        padding:3px;
-        border-style:solid;
+        height: 27px;
+        width: 80px;
+        border: 1px solid;
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 3px;
         .tron-border;
         .tron-text;
-        &:hover{
+
+        &:hover {
             .tron-border-hover;
-            .tron-text-hover;
+            .tron-text-hover
         }
     }
+    2
 
+    form {
+        float: right;
+        .search {
+            background-color: black;
+            color: white;
+            padding: 3px;
+            border: 1px solid;
+            .tron-border;
+            .tron-text;
+
+            &:hover {
+                .tron-border-hover;
+                .tron-text-hover;
+            }
+        }
+    }
 }
 
 .login-box{
@@ -291,4 +298,9 @@ button, input[type="submit"], input[type="button"]{
             .tron-text-hover;
         }
     }
+}
+
+
+h2.error{
+
 }

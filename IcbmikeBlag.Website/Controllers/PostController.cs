@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web.Http.ExceptionHandling;
+using System.Web.Http.Validation.Validators;
 using System.Web.Mvc;
 using IcbmikeBlag.Application.Repositories;
+using IcbmikeBlag.Models;
 using IcbmikeBlag.Models.Post;
 using IcbmikeBlag.Models.Search;
+using WebGrease.Activities;
 
 namespace IcbmikeBlag.Controllers
 {
@@ -17,7 +21,6 @@ namespace IcbmikeBlag.Controllers
             _postRepository = postRepository;
         }
 
-        //
         public ActionResult Index()
         {
             var homeModel = new PostsModel()
@@ -54,6 +57,11 @@ namespace IcbmikeBlag.Controllers
         public ActionResult Archive(int? year, int? month, int? day)
         {
             throw new NotImplementedException();
+        }
+
+        public ActionResult Error()
+        {
+            return View("Error");
         }
     }
 }

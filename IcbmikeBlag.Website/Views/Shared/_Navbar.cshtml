@@ -1,17 +1,16 @@
 ﻿@model IcbmikeBlag.Models.BlagModelBase
 
 <div id="navbar">
-    @using(Html.BeginForm("Search", "Post", FormMethod.Get)){
-
-        <ul>
-            <li>@Html.ActionLink("Home", "Index", "Post")</li>
-            <li>@Html.ActionLink("Archive", "Archive", "Post")</li>
+    
+        @Html.ActionLink("Home", "Index", "Post")
+        @Html.ActionLink("Archive", "Archive", "Post")
             
-            @if (Model.IsAuthenticated)
-            {
-                <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
-            }
-        </ul>
+        @if (Model.IsAuthenticated)
+        {
+            @Html.ActionLink("Admin", "Index", "Admin")
+        }
+
+    @using(Html.BeginForm("Search", "Post", FormMethod.Get)){
         <input class="search" type="text" name="searchterm" placeholder="Search..." />
     }
 </div>

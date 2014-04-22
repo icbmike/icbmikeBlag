@@ -148,6 +148,7 @@
     <Compile Include="App_Start\DependencyConfig.cs" />
     <Compile Include="Models\Admin\LoginModel.cs" />
     <Compile Include="Models\BlagModelBase.cs" />
+    <Compile Include="Models\ErrorModel.cs" />
     <Compile Include="Models\Post\PostsModel.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\PostController.cs" />
@@ -171,6 +172,7 @@
     <Content Include="Views\Admin\CreateOrEditPost.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Post\Search.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
