@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IcbmikeBlag.Website", "IcbmikeBlag.Website.csproj", "{03E1B286-8A25-478B-BDA4-F47AD5E8FDB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IcbmikeBlag.Website", "IcbmikeBlag.Website\IcbmikeBlag.Website.csproj", "{03E1B286-8A25-478B-BDA4-F47AD5E8FDB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IcbmikeBlag.Application", "..\IcbmikeBlag.Application\IcbmikeBlag.Application.csproj", "{537C1FEA-672C-4725-A30C-323DFF111BF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IcbmikeBlag.Application", "IcbmikeBlag.Application\IcbmikeBlag.Application.csproj", "{537C1FEA-672C-4725-A30C-323DFF111BF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IcbmikeBlag.Test", "..\IcbmikeBlag.Test\IcbmikeBlag.Test.csproj", "{79275549-87BD-4E29-A91D-078DAC91893F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IcbmikeBlag.Test", "IcbmikeBlag.Test\IcbmikeBlag.Test.csproj", "{79275549-87BD-4E29-A91D-078DAC91893F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

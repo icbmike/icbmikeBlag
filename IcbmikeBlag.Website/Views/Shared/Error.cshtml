@@ -1,0 +1,40 @@
+﻿@model IcbmikeBlag.Models.ErrorModel
+@using System.Web.Optimization
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    
+    @Styles.Render("~/styles/main")
+
+</head>
+<body>  
+
+    <div id="content-error">
+        @Html.Partial("_Navbar")
+        
+        <h2 class="error">OH SHIT - Something went Wrong</h2>
+
+        <p>
+            I dun goofed or maybe you were trying to fuck with stuff.
+
+            :/
+            
+
+            Probs my fault tho
+        </p>
+        
+        @Html.ActionLink("Go Home", "Index", "Post")
+    </div>
+    
+    
+    @Scripts.Render("~/js/jquery")
+    @Scripts.Render("~/js/main")
+</body>
+</html>
+
+
+

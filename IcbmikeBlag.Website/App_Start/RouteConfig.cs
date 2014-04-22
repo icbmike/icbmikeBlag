@@ -14,6 +14,11 @@ namespace IcbmikeBlag
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Error",
+                url: "Error",
+                defaults: new {controller = "Post", action = "Error"});
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Post", action = "Index", id = UrlParameter.Optional }
