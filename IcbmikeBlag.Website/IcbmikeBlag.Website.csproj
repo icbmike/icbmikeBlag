@@ -127,6 +127,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\gmail-colour.png" />
+    <Content Include="Content\Images\gmail-grayscale.png" />
+    <Content Include="Content\Images\octocat-colour.png" />
+    <Content Include="Content\Images\octocat-grayscale.png" />
+    <Content Include="Content\Images\twitter-colour.png" />
+    <Content Include="Content\Images\twitter-grayscale.png" />
     <Content Include="Content\Scripts\jquery\jquery-1.11.0.js" />
     <Content Include="Content\Scripts\main.js" />
     <Content Include="Content\Styles\main.css">
@@ -173,6 +179,7 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Post\Search.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
