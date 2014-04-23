@@ -34,8 +34,6 @@ hr {
   transition: box-shadow 1s ease;
   box-shadow: 0px 11px 22px 6px rgba(255, 255, 255, 0.75);
 }
-<<<<<<< Updated upstream
-=======
 #content > footer,
 #content-error > footer {
   border-top: 1px solid white;
@@ -75,7 +73,6 @@ a.gmail-link {
 a.gmail-link:hover {
   background-image: url("/Content/Images/gmail-colour.png");
 }
->>>>>>> Stashed changes
 #content:hover {
   box-shadow: 0px 11px 22px 6px rgba(50, 122, 138, 0.75);
 }
@@ -118,6 +115,7 @@ a.gmail-link:hover {
   border: 1px solid;
   padding: 10px;
   margin-top: 10px;
+  margin-bottom: 10px;
   -moz-transition: border-color 1s ease;
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
