@@ -34,6 +34,48 @@ hr {
   transition: box-shadow 1s ease;
   box-shadow: 0px 11px 22px 6px rgba(255, 255, 255, 0.75);
 }
+<<<<<<< Updated upstream
+=======
+#content > footer,
+#content-error > footer {
+  border-top: 1px solid white;
+  margin-top: 50px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#content > footer a,
+#content-error > footer a {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  padding: 0px 3%;
+  text-align: center;
+  -moz-transition: background-image 0.5s ease;
+  -o-transition: background-image 0.5s ease;
+  -webkit-transition: background-image 0.5s ease;
+  transition: background-image 0.5s ease;
+  background-size: auto 100%;
+}
+a.twitter-link {
+  background: url("/Content/Images/twitter-grayscale.png") no-repeat;
+}
+a.twitter-link:hover {
+  background-image: url("/Content/Images/twitter-colour.png");
+}
+a.github-link {
+  background: url("/Content/Images/octocat-grayscale.png") no-repeat;
+}
+a.github-link:hover {
+  background-image: url("/Content/Images/octocat-colour.png");
+}
+a.gmail-link {
+  background: url("/Content/Images/gmail-grayscale.png") no-repeat;
+}
+a.gmail-link:hover {
+  background-image: url("/Content/Images/gmail-colour.png");
+}
+>>>>>>> Stashed changes
 #content:hover {
   box-shadow: 0px 11px 22px 6px rgba(50, 122, 138, 0.75);
 }
