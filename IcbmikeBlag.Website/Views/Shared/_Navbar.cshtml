@@ -1,6 +1,6 @@
 ﻿@model IcbmikeBlag.Models.BlagModelBase
 
-<div id="navbar">
+<nav>
     
         @Html.ActionLink("Home", "Index", "Post")
         @Html.ActionLink("Archive", "Archive", "Post")
@@ -13,4 +13,4 @@
     @using(Html.BeginForm("Search", "Post", FormMethod.Get)){
         <input class="search" type="text" name="searchterm" placeholder="Search..." />
     }
-</div>
+</nav>

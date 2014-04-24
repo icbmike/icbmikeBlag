@@ -181,12 +181,12 @@ a.gmail-link:hover {
 .blog-post .post-footer .tag:hover {
   color: rgba(50, 122, 138, 0.75);
 }
-#navbar {
+nav {
   border-bottom: 1px solid white;
   padding-bottom: 7px;
   margin-bottom: 20px;
 }
-#navbar a {
+nav a {
   display: inline-block;
   height: 27px;
   width: 80px;
@@ -204,14 +204,14 @@ a.gmail-link:hover {
   -webkit-transition: color 1s ease;
   transition: color 1s ease;
 }
-#navbar a:hover {
+nav a:hover {
   border-color: rgba(50, 122, 138, 0.75);
   color: rgba(50, 122, 138, 0.75);
 }
-#navbar form {
+nav form {
   float: right;
 }
-#navbar form .search {
+nav form .search {
   background-color: black;
   color: white;
   padding: 3px;
@@ -226,7 +226,7 @@ a.gmail-link:hover {
   -webkit-transition: color 1s ease;
   transition: color 1s ease;
 }
-#navbar form .search:hover {
+nav form .search:hover {
   border-color: rgba(50, 122, 138, 0.75);
   color: rgba(50, 122, 138, 0.75);
 }
