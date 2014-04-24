@@ -1,21 +1,22 @@
 ﻿@using WebGrease.Css.Extensions
 @model IcbmikeBlag.Models.Post.PostModel
 
-<div class="blog-post">
-    <span class="title">@Model.Title</span><span class="date-posted">@Model.DatePosted.ToShortDateString() @Model.DatePosted.ToShortTimeString()</span>
-    
+<article>
+    <header>
+        <h1 class="title">@Model.Title</h1><span class="date-posted">@Model.DatePosted.ToShortDateString() @Model.DatePosted.ToShortTimeString()</span>
+    </header>
 
-    <div class="content">
+    <section>
         @foreach(var paragraph in Model.Content.Split(new []{ Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries))
-    {
-        <p>
-            @paragraph
-        </p>
-    }
+        {
+            <p>
+                @paragraph
+            </p>
+        }
        
-    </div>
+    </section>
     
-    <div class="post-footer">
+    <footer>
         @foreach (var tag in Model.Tags)
         {
             @Html.ActionLink(tag, "TaggedWith", "Post", new {tag = tag}, new{@class="tag"});
@@ -27,5 +28,5 @@
         {
             @Html.ActionLink("Edit", "CreateOrEditPost", "Admin", new {id = Model.ID}, new {@class = "edit-link"})
         }
-    </div>
-</div>
+    </footer>
+</article>
