@@ -6,7 +6,7 @@
         <h1 class="title">@Model.Title</h1><span class="date-posted">@Model.DatePosted.ToShortDateString() @Model.DatePosted.ToShortTimeString()</span>
     </header>
 
-    <section>
+    <div class="post-content">
         @foreach(var paragraph in Model.Content.Split(new []{ Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries))
         {
             <p>
@@ -14,7 +14,7 @@
             </p>
         }
        
-    </section>
+    </div>
     
     <footer>
         @foreach (var tag in Model.Tags)
