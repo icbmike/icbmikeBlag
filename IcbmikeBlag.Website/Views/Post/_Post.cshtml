@@ -1,21 +1,20 @@
 ﻿@using WebGrease.Css.Extensions
 @model IcbmikeBlag.Models.Post.PostModel
 
-<article class="blog-post">
+<article>
     <header>
-        <span class="title">@Model.Title</span><span class="date-posted">@Model.DatePosted.ToShortDateString() @Model.DatePosted.ToShortTimeString()</span>
+        <h1 class="title">@Model.Title</h1><span class="date-posted">@Model.DatePosted.ToShortDateString() @Model.DatePosted.ToShortTimeString()</span>
     </header>
-    
 
-    <div class="content">
+    <section>
         @foreach(var paragraph in Model.Content.Split(new []{ Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries))
-    {
-        <p>
-            @paragraph
-        </p>
-    }
+        {
+            <p>
+                @paragraph
+            </p>
+        }
        
-    </div>
+    </section>
     
     <footer>
         @foreach (var tag in Model.Tags)

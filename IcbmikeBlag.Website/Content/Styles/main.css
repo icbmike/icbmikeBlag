@@ -111,7 +111,7 @@ a.gmail-link:hover {
 .tron-text-hover {
   color: rgba(50, 122, 138, 0.75);
 }
-.blog-post {
+article {
   border: 1px solid;
   padding: 10px;
   margin-top: 10px;
@@ -122,8 +122,12 @@ a.gmail-link:hover {
   transition: border-color 1s ease;
   border-color: rgba(255, 255, 255, 0.75);
 }
-.blog-post .title,
-.blog-post .date-posted {
+article h1 {
+  font-size: 18px;
+  font-weight: normal;
+}
+article h1,
+article .date-posted {
   margin-bottom: 10px;
   display: inline-block;
   -moz-transition: color 1s ease;
@@ -131,17 +135,17 @@ a.gmail-link:hover {
   -webkit-transition: color 1s ease;
   transition: color 1s ease;
 }
-.blog-post .title:hover,
-.blog-post .date-posted:hover {
+article h1:hover,
+article .date-posted:hover {
   color: rgba(50, 122, 138, 0.75);
 }
-.blog-post .date-posted {
+article .date-posted {
   float: right;
 }
-.blog-post:hover {
+article:hover {
   border-color: rgba(50, 122, 138, 0.75);
 }
-.blog-post .content {
+article section {
   border: 1px solid;
   padding: 10px;
   -moz-transition: border-color 1s ease;
@@ -150,17 +154,17 @@ a.gmail-link:hover {
   transition: border-color 1s ease;
   border-color: rgba(255, 255, 255, 0.75);
 }
-.blog-post .content:hover {
+article section:hover {
   border-color: rgba(50, 122, 138, 0.75);
 }
-.blog-post .content p {
+article section p {
   margin-bottom: 15px;
 }
-.blog-post footer {
+article footer {
   margin-top: 10px;
 }
-.blog-post footer .comments-link,
-.blog-post footer .edit-link {
+article footer .comments-link,
+article footer .edit-link {
   float: right;
   -moz-transition: color 1s ease;
   -o-transition: color 1s ease;
@@ -168,17 +172,17 @@ a.gmail-link:hover {
   transition: color 1s ease;
   margin-right: 5px;
 }
-.blog-post footer .comments-link:hover,
-.blog-post footer .edit-link:hover {
+article footer .comments-link:hover,
+article footer .edit-link:hover {
   color: rgba(50, 122, 138, 0.75);
 }
-.blog-post footer .tag {
+article footer .tag {
   -moz-transition: color 1s ease;
   -o-transition: color 1s ease;
   -webkit-transition: color 1s ease;
   transition: color 1s ease;
 }
-.blog-post footer .tag:hover {
+article footer .tag:hover {
   color: rgba(50, 122, 138, 0.75);
 }
 nav {
