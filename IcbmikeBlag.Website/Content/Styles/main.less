@@ -155,8 +155,8 @@ article {
 
     .post-content {
         border: 1px solid;
-        padding: 10px;
         .tron-border;
+        padding: 10px;
         color:#bfbfbf;
         &:hover {
             .tron-border-hover;
@@ -317,6 +317,29 @@ nav {
             .tron-border-hover;
         }
     }
+    .post-preview{
+        border:1px solid;
+        .tron-border;
+        min-height:50px;
+        margin-bottom: 10px;
+        padding: 10px;
+        color:#bfbfbf;
+        &:hover{
+            .tron-border-hover;
+        }
+
+        a {
+            &:link, &:visited, &:active {
+                color: #168ecb;
+                text-decoration: none;
+            }
+            &:hover{
+                color: #168ecb;
+                text-decoration: underline;
+            }
+        }
+    }
+
     .tags{
         width: 300px;
     }
