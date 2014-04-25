@@ -147,12 +147,12 @@ article:hover {
 }
 article .post-content {
   border: 1px solid;
-  padding: 10px;
   -moz-transition: border-color 1s ease;
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
   border-color: rgba(255, 255, 255, 0.75);
+  padding: 10px;
   color: #bfbfbf;
 }
 article .post-content:hover {
@@ -348,9 +348,21 @@ nav form .search:hover {
   border-color: rgba(255, 255, 255, 0.75);
   min-height: 50px;
   margin-bottom: 10px;
+  padding: 10px;
+  color: #bfbfbf;
 }
 .post-editor .post-preview:hover {
   border-color: rgba(50, 122, 138, 0.75);
+}
+.post-editor .post-preview a:link,
+.post-editor .post-preview a:visited,
+.post-editor .post-preview a:active {
+  color: #168ecb;
+  text-decoration: none;
+}
+.post-editor .post-preview a:hover {
+  color: #168ecb;
+  text-decoration: underline;
 }
 .post-editor .tags {
   width: 300px;
