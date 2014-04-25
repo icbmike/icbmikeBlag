@@ -15,6 +15,10 @@ fieldset, hr{
     border:none;
 }
 
+h1 {
+    margin-top:0px;
+}
+
 #content, #content-error {
     position: relative;
     margin-left: auto;
@@ -125,38 +129,51 @@ article {
     margin-bottom: 10px;
     .tron-border;
 
-    h1{
+    header > h1 {
         font-size: 18px;
-        font-weight:normal;
+        font-weight: normal;
+        margin-top: 0px;
     }
 
-    h1, .date-posted{
+    header > h1, .date-posted {
         margin-bottom: 10px;
         display: inline-block;
         .tron-text;
-        &:hover{
+
+        &:hover {
             .tron-text-hover;
         }
     }
-    .date-posted{
-        float:right;
+
+    .date-posted {
+        float: right;
     }
 
-    &:hover{
+    &:hover {
         .tron-border-hover;
     }
-    .post-content{
+
+    .post-content {
         border: 1px solid;
         padding: 10px;
         .tron-border;
-        &:hover{
+        color:#bfbfbf;
+        &:hover {
             .tron-border-hover;
         }
 
-        p{
-            margin-bottom:15px;
+        a {
+            &:link, &:visited, &:active {
+                color: #168ecb;
+                text-decoration: none;
+            }
+            &:hover{
+                color: #168ecb;
+                text-decoration: underline;
+            }
         }
     }
+
 
     footer{
         margin-top:10px;
