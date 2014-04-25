@@ -137,6 +137,7 @@
     <Content Include="Content\Images\twitter-colour.png" />
     <Content Include="Content\Images\twitter-grayscale.png" />
     <Content Include="Content\Scripts\jquery\jquery-1.11.0.js" />
+    <Content Include="Content\Scripts\jquery\jquery.debounce-1.0.5.js" />
     <Content Include="Content\Scripts\main.js" />
     <Content Include="Content\Styles\main.css">
       <DependentUpon>main.less</DependentUpon>
