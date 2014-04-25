@@ -8,6 +8,7 @@ using IcbmikeBlag.Application.Repositories;
 using IcbmikeBlag.Models;
 using IcbmikeBlag.Models.Post;
 using IcbmikeBlag.Models.Search;
+using MarkdownSharp;
 using WebGrease.Activities;
 
 namespace IcbmikeBlag.Controllers
@@ -23,13 +24,16 @@ namespace IcbmikeBlag.Controllers
 
         public ActionResult Index()
         {
+            //Create a markdown parser
+            var markdown = new Markdown();
+
             var homeModel = new PostsModel()
             {
                 Posts = _postRepository.GetRecentBlogPosts().Select(post => new PostModel()
                 {
                     ID = post.ID,
                     Title = post.Title,
-                    Content = post.Content, // This would be where we would transform markdown
+                    Content = markdown.Transform(post.Content), 
                     DatePosted = post.DatePosted,
                     Tags = new List<string>(){"#hashtag"}
                 })
