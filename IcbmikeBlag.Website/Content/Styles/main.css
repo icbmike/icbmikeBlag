@@ -339,6 +339,19 @@ nav form .search:hover {
 .post-editor .content:focus {
   border-color: rgba(50, 122, 138, 0.75);
 }
+.post-editor .post-preview {
+  border: 1px solid;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+  min-height: 50px;
+  margin-bottom: 10px;
+}
+.post-editor .post-preview:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
 .post-editor .tags {
   width: 300px;
 }
