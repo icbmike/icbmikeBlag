@@ -152,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\UtilController.cs" />
     <Compile Include="Models\Admin\AdminHubModel.cs" />
     <Compile Include="Models\Admin\CreateOrEditPostModel.cs" />
     <Compile Include="Controllers\AdminController.cs" />
@@ -194,6 +195,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Filters\" />
+    <Folder Include="Views\Util\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IcbmikeBlag.Application\IcbmikeBlag.Application.csproj">
