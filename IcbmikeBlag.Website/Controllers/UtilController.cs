@@ -13,7 +13,7 @@ namespace IcbmikeBlag.Controllers
         /// Transforms markdown to html
         /// </summary>
         /// <returns></returns>
-        public ActionResult TransformMarkdownTransformMarkdown(string markdown)
+        public ActionResult TransformMarkdown(string markdown)
         {
             var transformer = new Markdown();
             var html = transformer.Transform(markdown);

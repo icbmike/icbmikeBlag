@@ -8,8 +8,8 @@
         var markdown = $(that).val();
 
         $.post(
-            '/Util/MarkdownTransform',
-            markdown,
+            '/Util/TransformMarkdown',
+            {markdown: markdown},
             function(data, textStatus, jqXHR) {
                 $(".post-editor .post-preview").html(data);
             });
