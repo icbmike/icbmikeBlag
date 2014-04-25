@@ -4,7 +4,16 @@
     //Use debounce to throttle previews
     $(".post-editor .content").on("keyup", $.debounce(function() {
         var that = this;
-        console.log(that);
+
+        var markdown = $(that).val();
+
+        $.post(
+            '/Util/MarkdownTransform',
+            markdown,
+            function(data, textStatus, jqXHR) {
+                $(".post-editor .post-preview").html(data);
+            });
+
     }, 600));
 
 });
