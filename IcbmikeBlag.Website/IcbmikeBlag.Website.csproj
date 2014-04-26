@@ -152,6 +152,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\ArchiveItemModel.cs" />
+    <Compile Include="Controllers\ArchiveModel.cs" />
     <Compile Include="Controllers\UtilController.cs" />
     <Compile Include="Models\Admin\AdminHubModel.cs" />
     <Compile Include="Models\Admin\CreateOrEditPostModel.cs" />
@@ -190,6 +192,7 @@
     <Content Include="Views\Posts\Post.cshtml" />
     <Content Include="Views\Posts\_Comments.cshtml" />
     <Content Include="Views\Posts\_Reply.cshtml" />
+    <Content Include="Views\Posts\Archive.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

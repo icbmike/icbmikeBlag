@@ -1,0 +1,49 @@
+﻿@using Microsoft.Ajax.Utilities
+@model IcbmikeBlag.Controllers.ArchiveModel
+
+@{
+    ViewBag.Title = "Archive";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h2>Archive</h2>
+
+<ul>
+    @foreach (var year in Model.Items
+        .DistinctBy(item => item.DatePosted.Year)
+        .Select(model => model.DatePosted.Year))
+    {
+        <li>
+            @year
+            <ul>
+                @foreach (var month in Model.Items
+                    .Where(item => item.DatePosted.Year == year)
+                    .DistinctBy(item => item.DatePosted.Month)
+                    .Select(model => model.DatePosted.Month))
+                {
+                    <li>
+                        @month
+                        <ul>
+                            @foreach (var day in Model.Items
+                                .Where(item => item.DatePosted.Year == year && item.DatePosted.Month == month)
+                                .DistinctBy(model => model.DatePosted.Day)
+                                .Select(model => model.DatePosted.Day))
+                            {
+                                <li>
+                                    @day
+                                    <ul>
+                                        @foreach (var post in Model.Items.Where(model => model.DatePosted.Year == year && model.DatePosted.Month == month && model.DatePosted.Day == day))
+                                        {
+                                            @Html.ActionLink(post.Title, "Post", new {id = post.ID})     
+                                        }
+                                    </ul>
+                                </li>
+                            }
+                        </ul>
+                    </li>    
+                }
+            </ul>
+
+        </li>
+    }
+</ul>

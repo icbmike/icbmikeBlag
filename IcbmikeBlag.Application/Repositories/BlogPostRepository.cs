@@ -55,5 +55,10 @@ namespace IcbmikeBlag.Application.Repositories
             replyable.ChildComments.Add(comment);
             _dbContext.SaveChanges();
         }
+
+        public IEnumerable<BlogPost> ListBlogPosts()
+        {
+            return _dbContext.BlogPosts.ToList();
+        }
     }
 }

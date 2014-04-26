@@ -19,5 +19,7 @@ namespace IcbmikeBlag.Application.Repositories
         Comment GetComment(int commentID);
         
         void AddComment(IReplyable replyable, Comment comment);
+        
+        IEnumerable<BlogPost> ListBlogPosts();
     }
 }

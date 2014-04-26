@@ -110,9 +110,22 @@ namespace IcbmikeBlag.Controllers
             : new List<CommentModel>();
         }
 
-        public ActionResult Archive(int? year, int? month, int? day)
+        public ActionResult Archive()
         {
-            throw new NotImplementedException();
+            var blogPosts = _postRepository.ListBlogPosts();
+
+            var archiveModel = new ArchiveModel()
+            {
+                Items = blogPosts.Select(post => new ArchiveItemModel()
+                {
+                    ID = post.ID,
+                    Title = post.Title,
+                    DatePosted = post.DatePosted
+                })
+                
+            };
+
+            return View(archiveModel);
         }
 
         public ActionResult Error()
