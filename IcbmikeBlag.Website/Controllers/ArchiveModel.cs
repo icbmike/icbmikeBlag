@@ -5,6 +5,8 @@ namespace IcbmikeBlag.Controllers
 {
     public class ArchiveModel : BlagModelBase
     {
-        public IEnumerable<ArchiveItemModel> Items { get; set; }
+
+        public Dictionary<int, Dictionary<int, Dictionary<int, List<ArchiveItemModel>>>> Items { get; set; } 
+
     }
 }

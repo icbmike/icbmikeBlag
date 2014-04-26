@@ -9,41 +9,35 @@
 <h2>Archive</h2>
 
 <ul>
-    @foreach (var year in Model.Items
-        .DistinctBy(item => item.DatePosted.Year)
-        .Select(model => model.DatePosted.Year))
+    
+    @foreach (var year in Model.Items.Keys)
     {
         <li>
             @year
             <ul>
-                @foreach (var month in Model.Items
-                    .Where(item => item.DatePosted.Year == year)
-                    .DistinctBy(item => item.DatePosted.Month)
-                    .Select(model => model.DatePosted.Month))
+                @foreach (var month in Model.Items[year].Keys)
                 {
                     <li>
                         @month
                         <ul>
-                            @foreach (var day in Model.Items
-                                .Where(item => item.DatePosted.Year == year && item.DatePosted.Month == month)
-                                .DistinctBy(model => model.DatePosted.Day)
-                                .Select(model => model.DatePosted.Day))
+                            @foreach (var day in Model.Items[year][month].Keys)
                             {
                                 <li>
                                     @day
                                     <ul>
-                                        @foreach (var post in Model.Items.Where(model => model.DatePosted.Year == year && model.DatePosted.Month == month && model.DatePosted.Day == day))
+                                        @foreach (var post in Model.Items[year][month][day])
                                         {
-                                            @Html.ActionLink(post.Title, "Post", new {id = post.ID})     
+                                            <li>
+                                                @Html.ActionLink(post.Title, "Post", new {id = post.ID})
+                                            </li>
                                         }
                                     </ul>
                                 </li>
                             }
                         </ul>
-                    </li>    
+                    </li>
                 }
             </ul>
-
         </li>
     }
 </ul>
