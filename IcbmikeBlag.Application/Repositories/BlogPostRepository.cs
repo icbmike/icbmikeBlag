@@ -58,7 +58,7 @@ namespace IcbmikeBlag.Application.Repositories
 
         public IEnumerable<BlogPost> ListBlogPosts()
         {
-            return _dbContext.BlogPosts.ToList();
+            return _dbContext.BlogPosts.OrderByDescending(post => post.DatePosted).ToList();
         }
     }
 }
