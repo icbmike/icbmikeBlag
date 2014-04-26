@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Runtime.Remoting.Messaging;
 using System.Web.Http.ExceptionHandling;
 using System.Web.Http.Validation.Validators;
 using System.Web.Mvc;
+using IcbmikeBlag.Application.Entities;
 using IcbmikeBlag.Application.Repositories;
 using IcbmikeBlag.Models;
 using IcbmikeBlag.Models.Post;
@@ -55,7 +58,45 @@ namespace IcbmikeBlag.Controllers
 
         public ActionResult Post(int id)
         {
-            throw new NotImplementedException();
+            var blogPost = _postRepository.GetPost(id);
+
+            //Check if we found something
+            if (blogPost == null)
+            {
+                return HttpNotFound("Blag post with that ID couldn't be found");
+            }
+
+            var markdown = new Markdown();
+
+            //Otherwise populate
+            var postModel = new PostModel()
+            {
+                ID = blogPost.ID,
+                Content = markdown.Transform(blogPost.Content),
+                DatePosted = blogPost.DatePosted,
+                Tags = new List<string>{"#hashtag"},
+                Title = blogPost.Content,
+                
+                //We need to get the comments, in the future we may need to only load comments to a certain depth
+                //However at this stage, I think it is safe to load the entire comment tree
+                Comments = ConstructCommentsTree(blogPost.Comments)
+            };
+
+            return View(postModel);
+        }
+
+        private IEnumerable<CommentModel> ConstructCommentsTree(IEnumerable<Comment> comments)
+        {
+            return comments.Any()
+                ? comments.Select(comment => new CommentModel()
+                {
+                    PosterName =  comment.PosterName,
+                    ID = comment.ID,
+                    Content = comment.Content,
+                    DatePosted = comment.DatePosted,
+                    ChildComments = ConstructCommentsTree(comment.ChildComments),
+            }) 
+            : new List<CommentModel>();
         }
 
         public ActionResult Archive(int? year, int? month, int? day)
