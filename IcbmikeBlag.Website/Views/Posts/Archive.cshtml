@@ -1,4 +1,5 @@
-﻿@using Microsoft.Ajax.Utilities
+﻿@using System.Globalization
+@using Microsoft.Ajax.Utilities
 @model IcbmikeBlag.Controllers.ArchiveModel
 
 @{
@@ -8,8 +9,7 @@
 
 <h2>Archive</h2>
 
-<ul>
-    
+<ul class="archive-tree">
     @foreach (var year in Model.Items.Keys)
     {
         <li>
@@ -18,7 +18,7 @@
                 @foreach (var month in Model.Items[year].Keys)
                 {
                     <li>
-                        @month
+                        @(new DateTime(2010, month, 1).ToString("MMMM", CultureInfo.InvariantCulture))
                         <ul>
                             @foreach (var day in Model.Items[year][month].Keys)
                             {

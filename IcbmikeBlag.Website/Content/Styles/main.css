@@ -459,3 +459,29 @@ input:hover {
   float: right;
   margin-right: 5px;
 }
+.archive-tree {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+.archive-tree:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+.archive-tree a:link,
+.archive-tree a:visited,
+.archive-tree a:active {
+  color: #168ecb;
+  text-decoration: none;
+}
+.archive-tree a:hover {
+  color: #168ecb;
+  text-decoration: underline;
+}
+.archive-tree ul {
+  padding-left: 30px;
+}
