@@ -18,7 +18,6 @@
 
 
     //Reply visibility toggling
-
     $(".comment header a").on("click", function() {
         var that = this;
         var comment = $(that).closest(".comment");
@@ -28,6 +27,18 @@
             replyEditor.hide();
         } else {
             replyEditor.show();
+        }
+    });
+
+    //Archive year visibility toggling
+    $(".archive-tree > li > span").on("click", function () {
+        var that = this;
+        var monthList = $(that).closest("li").find("ul");
+        
+        if (monthList.is(":visible")) {
+            monthList.hide();
+        } else {
+            monthList.show();
         }
     });
 

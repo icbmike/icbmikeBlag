@@ -13,12 +13,12 @@
     @foreach (var year in Model.Items.Keys)
     {
         <li>
-            @year
+            <span>@year</span>
             <ul>
                 @foreach (var month in Model.Items[year].Keys)
                 {
                     <li>
-                        @(new DateTime(2010, month, 1).ToString("MMMM", CultureInfo.InvariantCulture))
+                        <span > @(new DateTime(2010, month, 1).ToString("MMMM", CultureInfo.InvariantCulture))</span>
                         <ul>
                             @foreach (var day in Model.Items[year][month].Keys)
                             {
@@ -26,7 +26,7 @@
                                 foreach (var post in Model.Items[year][month][day])
                                 {
                                     <li>
-                                        @Html.ActionLink(post.Title, "Post", new {id = post.ID})
+                                        <span > @Html.ActionLink(post.Title, "Post", new {id = post.ID})</span>
                                     </li>
                                 }
 

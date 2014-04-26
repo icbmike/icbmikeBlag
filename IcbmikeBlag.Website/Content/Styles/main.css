@@ -52,6 +52,7 @@ h1 {
   -o-transition: background-image 0.5s ease;
   -webkit-transition: background-image 0.5s ease;
   transition: background-image 0.5s ease;
+  -moz-background-size: auto 100%;
   background-size: auto 100%;
 }
 a.twitter-link {
@@ -484,4 +485,10 @@ input:hover {
 }
 .archive-tree ul {
   padding-left: 30px;
+}
+.archive-tree > li > span {
+  cursor: pointer;
+}
+.archive-tree > li:not(:first-child) > ul {
+  display: none;
 }
