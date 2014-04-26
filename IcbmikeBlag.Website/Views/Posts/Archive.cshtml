@@ -1,0 +1,40 @@
+﻿@using System.Globalization
+@using Microsoft.Ajax.Utilities
+@model IcbmikeBlag.Controllers.ArchiveModel
+
+@{
+    ViewBag.Title = "Archive";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h2>Archive</h2>
+
+<ul class="archive-tree">
+    @foreach (var year in Model.Items.Keys)
+    {
+        <li>
+            <span>@year</span>
+            <ul>
+                @foreach (var month in Model.Items[year].Keys)
+                {
+                    <li>
+                        <span > @(new DateTime(2010, month, 1).ToString("MMMM", CultureInfo.InvariantCulture))</span>
+                        <ul>
+                            @foreach (var day in Model.Items[year][month].Keys)
+                            {
+
+                                foreach (var post in Model.Items[year][month][day])
+                                {
+                                    <li>
+                                        <span > @Html.ActionLink(post.Title, "Post", new {id = post.ID})</span>
+                                    </li>
+                                }
+
+                            }
+                        </ul>
+                    </li>
+                }
+            </ul>
+        </li>
+    }
+</ul>
