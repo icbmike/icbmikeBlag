@@ -76,17 +76,22 @@ namespace IcbmikeBlag.Controllers
                 DatePosted = blogPost.DatePosted,
                 Tags = new List<string>{"#hashtag"},
                 Title = blogPost.Title,
-                ReplyModel = new ReplyModel(){ReplyID = blogPost.ID,ReplyingToPost = true},
+                ReplyModel = new ReplyModel()
+                {
+                    ReplyID = blogPost.ID,
+                    ReplyingToPost = true,
+                    PostID = blogPost.ID
+                },
                 
                 //We need to get the comments, in the future we may need to only load comments to a certain depth
                 //However at this stage, I think it is safe to load the entire comment tree
-                Comments = ConstructCommentsTree(blogPost.Comments)
+                Comments = ConstructCommentsTree(blogPost.ChildComments, blogPost.ID)
             };
 
             return View(postModel);
         }
 
-        private IEnumerable<CommentModel> ConstructCommentsTree(IEnumerable<Comment> comments)
+        private IEnumerable<CommentModel> ConstructCommentsTree(IEnumerable<Comment> comments, int rootPostID)
         {
             return comments.Any()
                 ? comments.Select(comment => new CommentModel()
@@ -95,8 +100,12 @@ namespace IcbmikeBlag.Controllers
                     ID = comment.ID,
                     Content = comment.Content,
                     DatePosted = comment.DatePosted,
-                    ChildComments = ConstructCommentsTree(comment.ChildComments),
-                    ReplyModel = new ReplyModel(){ReplyID = comment.ID}
+                    ChildComments = ConstructCommentsTree(comment.ChildComments, rootPostID),
+                    ReplyModel = new ReplyModel()
+                    {
+                        ReplyID = comment.ID,
+                        PostID = rootPostID
+                    }
             }) 
             : new List<CommentModel>();
         }
@@ -115,7 +124,19 @@ namespace IcbmikeBlag.Controllers
         [HttpPost]
         public ActionResult Reply(ReplyModel model)
         {
-            throw new NotImplementedException();
+            var replyable = model.ReplyingToPost
+                ? (IReplyable) _postRepository.GetPost(model.ReplyID) //Safe cast to give the compiler context
+                : _postRepository.GetComment(model.ReplyID);
+
+
+            _postRepository.AddComment(replyable, new Comment()
+            {
+                PosterName = model.PosterName ?? "Anonymous",
+                Content = model.ReplyContent,
+                DatePosted = DateTime.Now
+            });
+
+            return RedirectToAction("Post", new {id = model.PostID});
         }
     }
 }

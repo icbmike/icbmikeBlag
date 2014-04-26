@@ -4,6 +4,8 @@
     {
         public int ReplyID { get; set; }
 
+        public int PostID { get; set; }
+
         public string PosterName { get; set; }
 
         public string ReplyContent { get; set; }

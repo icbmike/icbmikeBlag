@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace IcbmikeBlag.Application.Entities
 {
-    public class Comment
+    public class Comment : IReplyable
     {
         public int ID { get; set; }
         public string PosterName { get; set; }
@@ -11,5 +11,10 @@ namespace IcbmikeBlag.Application.Entities
         public string Content { get; set; }
 
         public virtual ICollection<Comment> ChildComments { get; set; } 
+    }
+
+    public interface IReplyable
+    {
+        ICollection<Comment> ChildComments { get; set; } 
     }
 }

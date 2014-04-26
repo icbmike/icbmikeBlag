@@ -5,6 +5,7 @@
     {
         @Html.HiddenFor(model => model.ReplyID)
         @Html.HiddenFor(model => model.ReplyingToPost)
+        @Html.HiddenFor(model => model.PostID)
 
         <header>
             @Html.TextBoxFor(model => model.PosterName, new{placeholder = "Anonymous"})

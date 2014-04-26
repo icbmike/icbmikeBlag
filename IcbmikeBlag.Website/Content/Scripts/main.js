@@ -16,4 +16,19 @@
 
     }, 600));
 
+
+    //Reply visibility toggling
+
+    $(".comment header a").on("click", function() {
+        var that = this;
+        var comment = $(that).closest(".comment");
+        var replyEditor = $(comment.find(".reply-editor"));
+
+        if (replyEditor.is(":visible")) {
+            replyEditor.hide();
+        } else {
+            replyEditor.show();
+        }
+    });
+
 });
