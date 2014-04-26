@@ -1,0 +1,17 @@
+﻿@model IcbmikeBlag.Models.Post.ReplyModel
+
+<section class="reply-editor">
+    @using (Html.BeginForm("Reply", "Posts", FormMethod.Post))
+    {
+        @Html.HiddenFor(model => model.ReplyID)
+        @Html.HiddenFor(model => model.ReplyingToPost)
+
+        <header>
+            @Html.TextBoxFor(model => model.PosterName, new{placeholder = "Anonymous"})
+        </header>
+
+        @Html.TextAreaFor(model => model.ReplyContent)
+        
+        <button type="submit">Reply</button>
+    }
+</section>

@@ -17,5 +17,8 @@ namespace IcbmikeBlag.Models.Post
         public IEnumerable<string> Tags { get; set; }
         
         public IEnumerable<CommentModel> Comments { get; set; }
+
+        public ReplyModel ReplyModel { get; set; }
+
     }
 }

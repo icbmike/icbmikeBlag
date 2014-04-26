@@ -2,15 +2,15 @@
 
 <nav>
     
-        @Html.ActionLink("Home", "Index", "Post")
-        @Html.ActionLink("Archive", "Archive", "Post")
+    @Html.ActionLink("Home", "Index", "Posts")
+    @Html.ActionLink("Archive", "Archive", "Posts")
             
-        @if (Model.IsAuthenticated)
+    @if (Model.IsAuthenticated)
         {
             @Html.ActionLink("Admin", "Index", "Admin")
         }
 
-    @using(Html.BeginForm("Search", "Post", FormMethod.Get)){
+    @using(Html.BeginForm("Search", "Posts", FormMethod.Get)){
         <input class="search" type="text" name="searchterm" placeholder="Search..." />
     }
 </nav>

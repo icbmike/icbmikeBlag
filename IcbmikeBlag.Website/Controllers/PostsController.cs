@@ -16,11 +16,11 @@ using WebGrease.Activities;
 
 namespace IcbmikeBlag.Controllers
 {
-    public class PostController : Controller
+    public class PostsController : Controller
     {
         private readonly IBlogPostRepository _postRepository;
 
-        public PostController(IBlogPostRepository postRepository)
+        public PostsController(IBlogPostRepository postRepository)
         {
             _postRepository = postRepository;
         }
@@ -75,7 +75,8 @@ namespace IcbmikeBlag.Controllers
                 Content = markdown.Transform(blogPost.Content),
                 DatePosted = blogPost.DatePosted,
                 Tags = new List<string>{"#hashtag"},
-                Title = blogPost.Content,
+                Title = blogPost.Title,
+                ReplyModel = new ReplyModel(){ReplyID = blogPost.ID,ReplyingToPost = true},
                 
                 //We need to get the comments, in the future we may need to only load comments to a certain depth
                 //However at this stage, I think it is safe to load the entire comment tree
@@ -95,6 +96,7 @@ namespace IcbmikeBlag.Controllers
                     Content = comment.Content,
                     DatePosted = comment.DatePosted,
                     ChildComments = ConstructCommentsTree(comment.ChildComments),
+                    ReplyModel = new ReplyModel(){ReplyID = comment.ID}
             }) 
             : new List<CommentModel>();
         }
@@ -108,6 +110,12 @@ namespace IcbmikeBlag.Controllers
         {
             var errorModel = new ErrorModel();
             return View("Error", errorModel);
+        }
+
+        [HttpPost]
+        public ActionResult Reply(ReplyModel model)
+        {
+            throw new NotImplementedException();
         }
     }
 }

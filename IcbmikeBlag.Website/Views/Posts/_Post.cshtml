@@ -14,10 +14,17 @@
     <footer>
         @foreach (var tag in Model.Tags)
         {
-            @Html.ActionLink(tag, "TaggedWith", "Post", new {tag = tag}, new{@class="tag"});
+            @Html.ActionLink(tag, "TaggedWith", "Posts", new {tag = tag}, new{@class="tag"})
+            ;
         }
+
         
-        @Html.ActionLink("Comments", "Post", "Post", new {id = Model.ID}, new{@class="comments-link"})
+        @Html.ActionLink("Comments", "Post", "Posts", new {id = Model.ID}, new{@class="comments-link"})
+        
+        @if (Model.ReplyModel != null)
+        {
+            @Html.Partial("_Reply", Model.ReplyModel)
+        }
 
         @if (Model.IsAuthenticated)
         {

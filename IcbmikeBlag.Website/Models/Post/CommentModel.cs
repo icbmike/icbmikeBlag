@@ -10,5 +10,8 @@ namespace IcbmikeBlag.Models.Post
         public string Content { get; set; }
         public DateTime DatePosted { get; set; }
         public IEnumerable<CommentModel> ChildComments { get; set; }
+
+
+        public ReplyModel ReplyModel { get; set; }
     }
 }
