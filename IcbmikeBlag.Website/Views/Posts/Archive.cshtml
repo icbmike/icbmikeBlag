@@ -22,17 +22,14 @@
                         <ul>
                             @foreach (var day in Model.Items[year][month].Keys)
                             {
-                                <li>
-                                    @day
-                                    <ul>
-                                        @foreach (var post in Model.Items[year][month][day])
-                                        {
-                                            <li>
-                                                @Html.ActionLink(post.Title, "Post", new {id = post.ID})
-                                            </li>
-                                        }
-                                    </ul>
-                                </li>
+
+                                foreach (var post in Model.Items[year][month][day])
+                                {
+                                    <li>
+                                        @Html.ActionLink(post.Title, "Post", new {id = post.ID})
+                                    </li>
+                                }
+
                             }
                         </ul>
                     </li>
