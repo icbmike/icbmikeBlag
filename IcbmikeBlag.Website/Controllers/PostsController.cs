@@ -110,9 +110,76 @@ namespace IcbmikeBlag.Controllers
             : new List<CommentModel>();
         }
 
-        public ActionResult Archive(int? year, int? month, int? day)
+        public ActionResult Archive()
         {
-            throw new NotImplementedException();
+            var blogPosts = _postRepository.ListBlogPosts();
+
+            var items = ConstructDateTree(blogPosts);
+
+            var archiveModel = new ArchiveModel()
+            {
+                Items = items
+                
+            };
+
+            return View(archiveModel);
+        }
+
+        private static Dictionary<int, Dictionary<int, Dictionary<int, List<ArchiveItemModel>>>> ConstructDateTree(IEnumerable<BlogPost> blogPosts)
+        {
+            var items = new Dictionary<int, Dictionary<int, Dictionary<int, List<ArchiveItemModel>>>>();
+
+            foreach (var blogPost in blogPosts)
+            {
+                if (!items.ContainsKey(blogPost.DatePosted.Year))
+                {
+                    //completely new item
+                    items.Add(blogPost.DatePosted.Year,
+                        new Dictionary<int, Dictionary<int, List<ArchiveItemModel>>>());
+                    items[blogPost.DatePosted.Year][blogPost.DatePosted.Month] =
+                        new Dictionary<int, List<ArchiveItemModel>>();
+                    items[blogPost.DatePosted.Year][blogPost.DatePosted.Month][blogPost.DatePosted.Day] =
+                            new List<ArchiveItemModel>
+                            {
+                                new ArchiveItemModel() {ID = blogPost.ID, Title = blogPost.Title}
+                            };
+                }
+                else
+                {
+                    if (!items[blogPost.DatePosted.Year].ContainsKey(blogPost.DatePosted.Month))
+                    {
+                        //year is defined but month isnt
+                        items[blogPost.DatePosted.Year][blogPost.DatePosted.Month] =
+                            new Dictionary<int, List<ArchiveItemModel>>();
+                        items[blogPost.DatePosted.Year][blogPost.DatePosted.Month][blogPost.DatePosted.Day] =
+                            new List<ArchiveItemModel>
+                            {
+                                new ArchiveItemModel() {ID = blogPost.ID, Title = blogPost.Title}
+                            };
+                    }
+                    else
+                    {
+                        //year and month are defined
+                        if (
+                            !items[blogPost.DatePosted.Year][blogPost.DatePosted.Month].ContainsKey(
+                                blogPost.DatePosted.Day))
+                        {
+                            //Day isnt
+                            items[blogPost.DatePosted.Year][blogPost.DatePosted.Month][blogPost.DatePosted.Day] =
+                                new List<ArchiveItemModel>
+                                {
+                                    new ArchiveItemModel() {ID = blogPost.ID, Title = blogPost.Title}
+                                };
+                        }
+                        else
+                        {
+                            items[blogPost.DatePosted.Year][blogPost.DatePosted.Month][blogPost.DatePosted.Day].Add(
+                                new ArchiveItemModel() {ID = blogPost.ID, Title = blogPost.Title});
+                        }
+                    }
+                }
+            }
+            return items;
         }
 
         public ActionResult Error()
