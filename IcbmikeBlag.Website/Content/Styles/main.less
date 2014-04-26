@@ -290,16 +290,7 @@ nav {
         .tron-border-hover;
     }
 
-    input{
-        background-color: black;
-        color:white;
-        border:1px solid;
-        .tron-border;
-
-        &:hover{
-            .tron-border-hover;
-        }
-    }
+    
 
     div{
         margin-bottom: 7px;
@@ -348,6 +339,36 @@ nav {
     }
 }
 
+.reply-editor {
+    border: 1px solid;
+    .tron-border;
+    padding: 10px;
+    margin-top:10px;
+
+    .comment &{
+        display: none;
+    }
+
+    &:hover {
+        .tron-border-hover;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        color: white;
+        border: 1px solid;
+        .tron-border;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        &:hover, &:focus {
+            .tron-border-hover;
+        }
+    }
+}
+
 button, input[type="submit"], input[type="button"]{
      width: 80px;
         height: 30px;
@@ -361,6 +382,17 @@ button, input[type="submit"], input[type="button"]{
             .tron-border-hover;
             .tron-text-hover;
         }
+}
+
+input{
+    background-color: black;
+    color:white;
+    border:1px solid;
+    .tron-border;
+
+    &:hover{
+        .tron-border-hover;
+    }
 }
 
 .admin-hub fieldset{
@@ -378,5 +410,15 @@ button, input[type="submit"], input[type="button"]{
         &:hover{
             .tron-text-hover;
         }
+    }
+}
+
+.comment{
+    time{
+        float:right;
+    }
+    header a{
+        float:right;
+        margin-right:5px;
     }
 }

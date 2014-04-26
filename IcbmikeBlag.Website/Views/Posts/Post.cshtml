@@ -1,0 +1,10 @@
+﻿@model IcbmikeBlag.Models.Post.PostModel
+
+@{
+    ViewBag.Title = Model.Title;
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@Html.Partial("_Post", Model)
+
+@Html.Partial("_Comments", Model.Comments)
