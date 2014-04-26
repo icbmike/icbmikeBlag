@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IcbmikeBlag.Application.Entities
 {
-    public class BlogPost
+    public class BlogPost : IReplyable
     {
         public int ID { get; set; }
 
@@ -14,6 +14,6 @@ namespace IcbmikeBlag.Application.Entities
         public DateTime DatePosted { get; set; }
         public string Title { get; set; }
 
-        public virtual ICollection<Comment> Comments { get; set; } 
+        public virtual ICollection<Comment> ChildComments { get; set; } 
     }
 }

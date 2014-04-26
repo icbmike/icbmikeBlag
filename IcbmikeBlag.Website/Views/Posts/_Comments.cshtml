@@ -1,0 +1,20 @@
+﻿@using IcbmikeBlag.Models.Post
+@model System.Collections.Generic.IEnumerable<IcbmikeBlag.Models.Post.CommentModel>
+
+@foreach (var comment in Model)
+{
+    <article class="comment">
+        <header>
+            <h1>@comment.PosterName</h1>
+            <time>@comment.DatePosted</time>
+            <a href="#">Reply</a>
+        </header>
+        @comment.Content
+        
+        
+        @Html.Partial("_Reply", comment.ReplyModel)
+
+        @Html.Partial("_Comments", comment.ChildComments)
+
+    </article>
+}

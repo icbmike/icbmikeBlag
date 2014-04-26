@@ -14,6 +14,10 @@ namespace IcbmikeBlag.Application.Repositories
 
         void UpdatePost(BlogPost blogPost);
 
-        BlogPost GetPost(int value);
+        BlogPost GetPost(int postID);
+
+        Comment GetComment(int commentID);
+        
+        void AddComment(IReplyable replyable, Comment comment);
     }
 }

@@ -112,7 +112,7 @@ namespace IcbmikeBlag.Controllers
             }
 
             //Redirect to home page
-            return RedirectToAction("Index", "Post");
+            return RedirectToAction("Index", "Posts");
         }
 
         [Authorize]

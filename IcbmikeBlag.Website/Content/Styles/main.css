@@ -305,19 +305,6 @@ nav form .search:hover {
 .post-editor:hover {
   border-color: rgba(50, 122, 138, 0.75);
 }
-.post-editor input {
-  background-color: black;
-  color: white;
-  border: 1px solid;
-  -moz-transition: border-color 1s ease;
-  -o-transition: border-color 1s ease;
-  -webkit-transition: border-color 1s ease;
-  transition: border-color 1s ease;
-  border-color: rgba(255, 255, 255, 0.75);
-}
-.post-editor input:hover {
-  border-color: rgba(50, 122, 138, 0.75);
-}
 .post-editor div {
   margin-bottom: 7px;
 }
@@ -370,6 +357,40 @@ nav form .search:hover {
 .post-editor .button {
   float: right;
 }
+.reply-editor {
+  border: 1px solid;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+  padding: 10px;
+  margin-top: 10px;
+}
+.comment .reply-editor {
+  display: none;
+}
+.reply-editor:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+.reply-editor textarea {
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  color: white;
+  border: 1px solid;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.reply-editor textarea:hover,
+.reply-editor textarea:focus {
+  border-color: rgba(50, 122, 138, 0.75);
+}
 button,
 input[type="submit"],
 input[type="button"] {
@@ -395,6 +416,19 @@ input[type="button"]:hover {
   border-color: rgba(50, 122, 138, 0.75);
   color: rgba(50, 122, 138, 0.75);
 }
+input {
+  background-color: black;
+  color: white;
+  border: 1px solid;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+input:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
 .admin-hub fieldset {
   border: 1px solid;
   margin-top: 20px;
@@ -417,4 +451,11 @@ input[type="button"]:hover {
 }
 .admin-hub fieldset a:hover {
   color: rgba(50, 122, 138, 0.75);
+}
+.comment time {
+  float: right;
+}
+.comment header a {
+  float: right;
+  margin-right: 5px;
 }

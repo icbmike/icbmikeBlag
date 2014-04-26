@@ -40,9 +40,20 @@ namespace IcbmikeBlag.Application.Repositories
             _dbContext.SaveChanges();
         }
 
-        public BlogPost GetPost(int value)
+        public BlogPost GetPost(int postID)
         {
-            return _dbContext.BlogPosts.Find(value);
+            return _dbContext.BlogPosts.Find(postID);
+        }
+
+        public Comment GetComment(int commentID)
+        {
+            return _dbContext.Comments.Find(commentID);
+        }
+
+        public void AddComment(IReplyable replyable, Comment comment)
+        {
+            replyable.ChildComments.Add(comment);
+            _dbContext.SaveChanges();
         }
     }
 }
