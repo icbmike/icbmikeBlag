@@ -15,8 +15,11 @@
         @Html.ActionLink("Change account deets", "ChangeUser", "Admin")
     
         <a href="#">Create User?</a>
+        
     </fieldset>
     
+     @Html.Partial("_StyleToggle", Model.StyleToggleModel)
+
     <fieldset>
         <legend>Sick Stats</legend>
 

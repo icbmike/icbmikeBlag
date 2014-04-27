@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -24,7 +25,13 @@ namespace IcbmikeBlag.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            var model = new AdminHubModel();
+            var model = new AdminHubModel()
+            {
+                StyleToggleModel = new StyleToggleModel()
+                {
+                    Style = ConfigurationManager.AppSettings["SiteStyle"]
+                }
+            };
             return View(model);
         }
 
@@ -121,5 +128,12 @@ namespace IcbmikeBlag.Controllers
             throw new NotImplementedException();
         }
 
+        [Authorize]
+        public ActionResult ToggleSiteStyle(StyleToggleModel model)
+        {
+
+            ConfigurationManager.AppSettings["SiteStyle"] = model.Style;
+            return RedirectToAction("Index");
+        }
     }
 }
