@@ -166,6 +166,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="App_Start\DependencyConfig.cs" />
     <Compile Include="Models\Admin\LoginModel.cs" />
+    <Compile Include="Models\Admin\StyleToggleModel.cs" />
     <Compile Include="Models\BlagModelBase.cs" />
     <Compile Include="Models\ErrorModel.cs" />
     <Compile Include="Models\Post\CommentModel.cs" />
@@ -200,6 +201,7 @@
     <Content Include="Views\Posts\_Reply.cshtml" />
     <Content Include="Views\Posts\Archive.cshtml" />
     <Content Include="Content\Styles\lightstyle.less" />
+    <Content Include="Views\Admin\_StyleToggle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
