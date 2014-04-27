@@ -1,0 +1,494 @@
+body {
+  background-color: black;
+  color: #aaaaaa;
+  font-family: 'Droid Sans', sans-serif;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #aaaaaa;
+  text-decoration: none;
+}
+fieldset,
+hr {
+  border: none;
+}
+h1 {
+  margin-top: 0px;
+}
+#content,
+#content-error {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 940px;
+  min-height: 1000px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  -moz-transition: box-shadow 1s ease;
+  -o-transition: box-shadow 1s ease;
+  -webkit-transition: box-shadow 1s ease;
+  transition: box-shadow 1s ease;
+  box-shadow: 0px 11px 22px 6px rgba(255, 255, 255, 0.75);
+}
+#content > footer,
+#content-error > footer {
+  border-top: 1px solid white;
+  margin-top: 50px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#content > footer a,
+#content-error > footer a {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  padding: 0px 3%;
+  text-align: center;
+  -moz-transition: background-image 0.5s ease;
+  -o-transition: background-image 0.5s ease;
+  -webkit-transition: background-image 0.5s ease;
+  transition: background-image 0.5s ease;
+  -moz-background-size: auto 100%;
+  background-size: auto 100%;
+}
+a.twitter-link {
+  background: url("/Content/Images/twitter-grayscale.png") no-repeat;
+}
+a.twitter-link:hover {
+  background-image: url("/Content/Images/twitter-colour.png");
+}
+a.github-link {
+  background: url("/Content/Images/octocat-grayscale.png") no-repeat;
+}
+a.github-link:hover {
+  background-image: url("/Content/Images/octocat-colour.png");
+}
+a.gmail-link {
+  background: url("/Content/Images/gmail-grayscale.png") no-repeat;
+}
+a.gmail-link:hover {
+  background-image: url("/Content/Images/gmail-colour.png");
+}
+#content:hover {
+  box-shadow: 0px 11px 22px 6px rgba(50, 122, 138, 0.75);
+}
+#content-error:hover {
+  box-shadow: 0px 11px 22px 6px rgba(255, 20, 20, 0.75);
+}
+.tron-boxshadow {
+  -moz-transition: box-shadow 1s ease;
+  -o-transition: box-shadow 1s ease;
+  -webkit-transition: box-shadow 1s ease;
+  transition: box-shadow 1s ease;
+  box-shadow: 0px 11px 22px 6px rgba(255, 255, 255, 0.75);
+}
+.tron-boxshadow-hover {
+  box-shadow: 0px 11px 22px 6px rgba(50, 122, 138, 0.75);
+}
+.tron-boxshadow-error-hover {
+  box-shadow: 0px 11px 22px 6px rgba(255, 20, 20, 0.75);
+}
+.tron-border {
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+.tron-border-hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+.tron-text {
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+}
+.tron-text-hover {
+  color: rgba(50, 122, 138, 0.75);
+}
+article {
+  border: 1px solid;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+article header > h1 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 0px;
+}
+article header > h1,
+article .date-posted {
+  margin-bottom: 10px;
+  display: inline-block;
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+}
+article header > h1:hover,
+article .date-posted:hover {
+  color: rgba(50, 122, 138, 0.75);
+}
+article .date-posted {
+  float: right;
+}
+article:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+article .post-content {
+  border: 1px solid;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+  padding: 10px;
+  color: #bfbfbf;
+}
+article .post-content:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+article .post-content a:link,
+article .post-content a:visited,
+article .post-content a:active {
+  color: #168ecb;
+  text-decoration: none;
+}
+article .post-content a:hover {
+  color: #168ecb;
+  text-decoration: underline;
+}
+article footer {
+  margin-top: 10px;
+}
+article footer .comments-link,
+article footer .edit-link {
+  float: right;
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+  margin-right: 5px;
+}
+article footer .comments-link:hover,
+article footer .edit-link:hover {
+  color: rgba(50, 122, 138, 0.75);
+}
+article footer .tag {
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+}
+article footer .tag:hover {
+  color: rgba(50, 122, 138, 0.75);
+}
+nav {
+  border-bottom: 1px solid white;
+  padding-bottom: 7px;
+  margin-bottom: 20px;
+}
+nav a {
+  display: inline-block;
+  height: 27px;
+  width: 80px;
+  border: 1px solid;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 3px;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+}
+nav a:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+  color: rgba(50, 122, 138, 0.75);
+}
+nav form {
+  float: right;
+}
+nav form .search {
+  background-color: black;
+  color: white;
+  padding: 3px;
+  border: 1px solid;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+}
+nav form .search:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+  color: rgba(50, 122, 138, 0.75);
+}
+.login-box {
+  margin: 30px auto 0px auto;
+  position: relative;
+  border: 1px solid;
+  width: 250px;
+  padding: 20px;
+  padding-bottom: 50px;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+.login-box:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+.login-box div {
+  margin-bottom: 10px;
+}
+.login-box div label {
+  display: inline-block;
+  width: 85px;
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+}
+.login-box div label:hover {
+  color: rgba(50, 122, 138, 0.75);
+}
+.login-box div input {
+  background-color: black;
+  color: white;
+  padding: 3px;
+  border: 1px solid;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+.login-box div input:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+.login-box input[type=submit] {
+  float: right;
+  display: inline-block;
+}
+.error {
+  color: red;
+}
+.post-editor {
+  padding: 10px;
+  border: 1px solid;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+.post-editor:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+.post-editor div {
+  margin-bottom: 7px;
+}
+.post-editor .content {
+  width: 100%;
+  height: 500px;
+  background-color: black;
+  color: white;
+  border: 1px solid;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.post-editor .content:hover,
+.post-editor .content:focus {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+.post-editor .post-preview {
+  border: 1px solid;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+  min-height: 50px;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: #bfbfbf;
+}
+.post-editor .post-preview:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+.post-editor .post-preview a:link,
+.post-editor .post-preview a:visited,
+.post-editor .post-preview a:active {
+  color: #168ecb;
+  text-decoration: none;
+}
+.post-editor .post-preview a:hover {
+  color: #168ecb;
+  text-decoration: underline;
+}
+.post-editor .tags {
+  width: 300px;
+}
+.post-editor .button {
+  float: right;
+}
+.reply-editor {
+  border: 1px solid;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+  padding: 10px;
+  margin-top: 10px;
+}
+.comment .reply-editor {
+  display: none;
+}
+.reply-editor:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+.reply-editor textarea {
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  color: white;
+  border: 1px solid;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.reply-editor textarea:hover,
+.reply-editor textarea:focus {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+button,
+input[type="submit"],
+input[type="button"] {
+  width: 80px;
+  height: 30px;
+  background-color: black;
+  border: 1px solid;
+  color: white;
+  cursor: pointer;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+}
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+  color: rgba(50, 122, 138, 0.75);
+}
+input {
+  background-color: black;
+  color: white;
+  border: 1px solid;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+input:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+.admin-hub fieldset {
+  border: 1px solid;
+  margin-top: 20px;
+  padding: 10px;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+.admin-hub fieldset:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+.admin-hub fieldset a {
+  display: block;
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+}
+.admin-hub fieldset a:hover {
+  color: rgba(50, 122, 138, 0.75);
+}
+.comment time {
+  float: right;
+}
+.comment header a {
+  float: right;
+  margin-right: 5px;
+}
+.archive-tree {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+.archive-tree:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+}
+.archive-tree a:link,
+.archive-tree a:visited,
+.archive-tree a:active {
+  color: #168ecb;
+  text-decoration: none;
+}
+.archive-tree a:hover {
+  color: #168ecb;
+  text-decoration: underline;
+}
+.archive-tree ul {
+  padding-left: 30px;
+}
+.archive-tree > li > span {
+  cursor: pointer;
+}
+.archive-tree > li:not(:first-child) > ul {
+  display: none;
+}
