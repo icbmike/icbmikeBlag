@@ -1,13 +1,11 @@
 body {
-  background-color: black;
-  color: #aaaaaa;
   font-family: 'Droid Sans', sans-serif;
 }
 a:link,
 a:visited,
 a:hover,
 a:active {
-  color: #aaaaaa;
+  color: #168ecb;
   text-decoration: none;
 }
 fieldset,
@@ -97,7 +95,7 @@ a.gmail-link:hover {
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  border-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(200, 200, 255, 0.75);
 }
 .tron-border-hover {
   border-color: rgba(50, 122, 138, 0.75);
@@ -112,20 +110,15 @@ a.gmail-link:hover {
   color: rgba(50, 122, 138, 0.75);
 }
 article {
-  border: 1px solid;
+  border: 1px solid #cecece;
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  -moz-transition: border-color 1s ease;
-  -o-transition: border-color 1s ease;
-  -webkit-transition: border-color 1s ease;
-  transition: border-color 1s ease;
-  border-color: rgba(255, 255, 255, 0.75);
 }
 article header > h1 {
-  font-size: 18px;
   font-weight: normal;
   margin-top: 0px;
+  color: #168ecb;
 }
 article header > h1,
 article .date-posted {
@@ -152,9 +145,8 @@ article .post-content {
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  border-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(200, 200, 255, 0.75);
   padding: 10px;
-  color: #bfbfbf;
 }
 article .post-content:hover {
   border-color: rgba(50, 122, 138, 0.75);
@@ -211,7 +203,7 @@ nav a {
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  border-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(200, 200, 255, 0.75);
   -moz-transition: color 1s ease;
   -o-transition: color 1s ease;
   -webkit-transition: color 1s ease;
@@ -225,15 +217,13 @@ nav form {
   float: right;
 }
 nav form .search {
-  background-color: black;
-  color: white;
   padding: 3px;
   border: 1px solid;
   -moz-transition: border-color 1s ease;
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  border-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(200, 200, 255, 0.75);
   -moz-transition: color 1s ease;
   -o-transition: color 1s ease;
   -webkit-transition: color 1s ease;
@@ -254,7 +244,7 @@ nav form .search:hover {
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  border-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(200, 200, 255, 0.75);
 }
 .login-box:hover {
   border-color: rgba(50, 122, 138, 0.75);
@@ -274,15 +264,13 @@ nav form .search:hover {
   color: rgba(50, 122, 138, 0.75);
 }
 .login-box div input {
-  background-color: black;
-  color: white;
   padding: 3px;
   border: 1px solid;
   -moz-transition: border-color 1s ease;
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  border-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(200, 200, 255, 0.75);
 }
 .login-box div input:hover {
   border-color: rgba(50, 122, 138, 0.75);
@@ -301,7 +289,7 @@ nav form .search:hover {
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  border-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(200, 200, 255, 0.75);
 }
 .post-editor:hover {
   border-color: rgba(50, 122, 138, 0.75);
@@ -312,14 +300,12 @@ nav form .search:hover {
 .post-editor .content {
   width: 100%;
   height: 500px;
-  background-color: black;
-  color: white;
   border: 1px solid;
   -moz-transition: border-color 1s ease;
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  border-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(200, 200, 255, 0.75);
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -333,11 +319,10 @@ nav form .search:hover {
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  border-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(200, 200, 255, 0.75);
   min-height: 50px;
   margin-bottom: 10px;
   padding: 10px;
-  color: #bfbfbf;
 }
 .post-editor .post-preview:hover {
   border-color: rgba(50, 122, 138, 0.75);
@@ -364,7 +349,7 @@ nav form .search:hover {
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  border-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(200, 200, 255, 0.75);
   padding: 10px;
   margin-top: 10px;
 }
@@ -377,14 +362,12 @@ nav form .search:hover {
 .reply-editor textarea {
   width: 100%;
   height: 100px;
-  background-color: black;
-  color: white;
   border: 1px solid;
   -moz-transition: border-color 1s ease;
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  border-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(200, 200, 255, 0.75);
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -397,15 +380,13 @@ input[type="submit"],
 input[type="button"] {
   width: 80px;
   height: 30px;
-  background-color: black;
   border: 1px solid;
-  color: white;
   cursor: pointer;
   -moz-transition: border-color 1s ease;
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  border-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(200, 200, 255, 0.75);
   -moz-transition: color 1s ease;
   -o-transition: color 1s ease;
   -webkit-transition: color 1s ease;
@@ -418,14 +399,12 @@ input[type="button"]:hover {
   color: rgba(50, 122, 138, 0.75);
 }
 input {
-  background-color: black;
-  color: white;
   border: 1px solid;
   -moz-transition: border-color 1s ease;
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  border-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(200, 200, 255, 0.75);
 }
 input:hover {
   border-color: rgba(50, 122, 138, 0.75);
@@ -438,7 +417,7 @@ input:hover {
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  border-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(200, 200, 255, 0.75);
 }
 .admin-hub fieldset:hover {
   border-color: rgba(50, 122, 138, 0.75);
@@ -456,9 +435,14 @@ input:hover {
 .comment time {
   float: right;
 }
+.comment h1 {
+  font-size: 16px;
+  color: black;
+}
 .comment header a {
   float: right;
   margin-right: 5px;
+  color: #168ecb;
 }
 .archive-tree {
   padding-top: 10px;
@@ -468,7 +452,7 @@ input:hover {
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
-  border-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(200, 200, 255, 0.75);
 }
 .archive-tree:hover {
   border-color: rgba(50, 122, 138, 0.75);
