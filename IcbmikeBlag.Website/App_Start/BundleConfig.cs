@@ -10,8 +10,12 @@ namespace IcbmikeBlag
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new StyleBundle("~/styles/main").Include(
-                "~/Content/Styles/main.css"
+            bundles.Add(new StyleBundle("~/styles/light").Include(
+                "~/Content/Styles/lightstyle.css"
+                ));
+
+            bundles.Add(new StyleBundle("~/styles/dark").Include(
+                "~/Content/Styles/tronstyle.css"
                 ));
 
             bundles.Add(new ScriptBundle("~/js/jquery").Include(

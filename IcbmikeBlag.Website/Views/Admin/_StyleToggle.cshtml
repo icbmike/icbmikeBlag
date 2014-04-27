@@ -1,0 +1,14 @@
+﻿@model IcbmikeBlag.Models.Admin.StyleToggleModel
+<fieldset >
+    <legend>Change Style</legend>
+
+    @using (Html.BeginForm("ToggleSiteStyle", "Admin", FormMethod.Post))
+    {
+        <div>@Html.RadioButtonFor(model => model.Style, "Light") Light</div>
+
+        <div >@Html.RadioButtonFor(model => model.Style, "Dark") Dark</div>
+
+
+        <input type="submit" value="Change"/>
+    }
+</fieldset>

@@ -1,5 +1,7 @@
 ﻿@model IcbmikeBlag.Models.BlagModelBase
+@using System.Configuration
 @using System.Web.Optimization
+@using IcbmikeBlag.Application.Migrations
 
 <!DOCTYPE html>
 
@@ -10,9 +12,19 @@
     
     <link href="//fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css">
-    @Styles.Render("~/styles/main")
+    
+    @if (ConfigurationManager.AppSettings["SiteStyle"] == "Light")
+    {
+        @Styles.Render("~/styles/light")
+    }
+    else
+    {
+        @Styles.Render("~/styles/dark")
+    }
+        
 
-</head>
+    </
+        head>
 <body>
 
     <main id="content">
