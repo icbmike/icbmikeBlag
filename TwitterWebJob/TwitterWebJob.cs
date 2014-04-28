@@ -20,10 +20,18 @@ namespace IcbmikeBlag.TwitterWebJob
             
         }
 
+        public static void EnqueueBlogPost([QueueOutput("blogPostQueue")] out Payload payload, int postID)
+        {
+            payload = new Payload()
+            {
+                PostID = postID;
+            };
+        }
+
     }
 
     public class Payload
     {
-        int PostID { get; set; }
+        public int PostID { get; set; }
     }
 }

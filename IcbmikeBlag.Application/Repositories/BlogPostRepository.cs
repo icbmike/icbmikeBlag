@@ -2,6 +2,8 @@
 using System.Linq;
 using IcbmikeBlag.Application.DAL;
 using IcbmikeBlag.Application.Entities;
+using Microsoft.WindowsAzure.Jobs;
+using IcbmikeBlag.TwitterWebJob;
 
 namespace IcbmikeBlag.Application.Repositories
 {
@@ -26,6 +28,9 @@ namespace IcbmikeBlag.Application.Repositories
         {
             _dbContext.BlogPosts.Add(blogPost);
             _dbContext.SaveChanges();
+
+            var jobHost = new JobHost();
+            jobHost.Call(typeof(TwitterWebJob.TwitterWebJob).GetMethod("EnqueueBlogPost"), new{postID = blogPost.ID});
         }
 
         public void UpdatePost(BlogPost blogPost)
