@@ -29,6 +29,7 @@ namespace IcbmikeBlag.Application.Repositories
             _dbContext.BlogPosts.Add(blogPost);
             _dbContext.SaveChanges();
 
+            //
             var jobHost = new JobHost();
             jobHost.Call(typeof(TwitterWebJob.TwitterWebJob).GetMethod("EnqueueBlogPost"), new{postID = blogPost.ID});
         }

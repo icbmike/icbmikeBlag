@@ -17,7 +17,7 @@ namespace IcbmikeBlag.TwitterWebJob
 
         public static void BlogPostQueue([QueueInput("blogPostQueue")]Payload payload)
         {
-            
+            Console.WriteLine(payload.PostID);
         }
 
         public static void EnqueueBlogPost([QueueOutput("blogPostQueue")] out Payload payload, int postID)
