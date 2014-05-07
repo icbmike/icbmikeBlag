@@ -94,6 +94,12 @@
       <DependentUpon>201404191053276_AddUserEntity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TwitterWebJob\IcbmikeBlag.TwitterWebJob.csproj">
+      <Project>{381ab4e6-06d7-4753-87be-5b1cb4587b26}</Project>
+      <Name>IcbmikeBlag.TwitterWebJob</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

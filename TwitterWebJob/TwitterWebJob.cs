@@ -24,7 +24,7 @@ namespace IcbmikeBlag.TwitterWebJob
         {
             payload = new Payload()
             {
-                PostID = postID;
+                PostID = postID
             };
         }
 

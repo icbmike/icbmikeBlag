@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IcbmikeBlag.Application", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IcbmikeBlag.Test", "IcbmikeBlag.Test\IcbmikeBlag.Test.csproj", "{79275549-87BD-4E29-A91D-078DAC91893F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IcbmikeBlag.TwitterWebJob", "TwitterWebJob\IcbmikeBlag.TwitterWebJob.csproj", "{381AB4E6-06D7-4753-87BE-5B1CB4587B26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{79275549-87BD-4E29-A91D-078DAC91893F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79275549-87BD-4E29-A91D-078DAC91893F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79275549-87BD-4E29-A91D-078DAC91893F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{381AB4E6-06D7-4753-87BE-5B1CB4587B26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{381AB4E6-06D7-4753-87BE-5B1CB4587B26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{381AB4E6-06D7-4753-87BE-5B1CB4587B26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{381AB4E6-06D7-4753-87BE-5B1CB4587B26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

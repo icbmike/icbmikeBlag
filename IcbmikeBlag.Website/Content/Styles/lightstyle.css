@@ -20,15 +20,16 @@ h1 {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  width: 940px;
+  width: 800px;
   min-height: 1000px;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 15px;
-  -moz-transition: box-shadow 1s ease;
-  -o-transition: box-shadow 1s ease;
-  -webkit-transition: box-shadow 1s ease;
-  transition: box-shadow 1s ease;
+  margin-top: 0px;
+  -moz-transition: box-shadow 0.2s ease;
+  -o-transition: box-shadow 0.2s ease;
+  -webkit-transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
   box-shadow: 0px 11px 22px 6px rgba(255, 255, 255, 0.75);
 }
 #content > footer,
@@ -78,10 +79,10 @@ a.gmail-link:hover {
   box-shadow: 0px 11px 22px 6px rgba(255, 20, 20, 0.75);
 }
 .tron-boxshadow {
-  -moz-transition: box-shadow 1s ease;
-  -o-transition: box-shadow 1s ease;
-  -webkit-transition: box-shadow 1s ease;
-  transition: box-shadow 1s ease;
+  -moz-transition: box-shadow 0.2s ease;
+  -o-transition: box-shadow 0.2s ease;
+  -webkit-transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
   box-shadow: 0px 11px 22px 6px rgba(255, 255, 255, 0.75);
 }
 .tron-boxshadow-hover {
@@ -110,14 +111,14 @@ a.gmail-link:hover {
   color: rgba(50, 122, 138, 0.75);
 }
 article {
-  border: 1px solid #cecece;
   padding: 10px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 article header > h1 {
   font-weight: normal;
   margin-top: 0px;
+  font-size: 1.5em;
   color: #ff8d00;
 }
 article header > h1,
@@ -136,20 +137,10 @@ article .date-posted:hover {
 article .date-posted {
   float: right;
 }
-article:hover {
-  border-color: rgba(50, 122, 138, 0.75);
-}
 article .post-content {
-  border: 1px solid;
-  -moz-transition: border-color 1s ease;
-  -o-transition: border-color 1s ease;
-  -webkit-transition: border-color 1s ease;
-  transition: border-color 1s ease;
-  border-color: rgba(200, 200, 255, 0.75);
+  line-height: 1.6;
   padding: 10px;
-}
-article .post-content:hover {
-  border-color: rgba(50, 122, 138, 0.75);
+  border-bottom: 1px solid #cecece;
 }
 article .post-content a:link,
 article .post-content a:visited,
@@ -198,7 +189,7 @@ nav a {
   border: 1px solid;
   text-align: center;
   vertical-align: middle;
-  padding-top: 3px;
+  padding-top: 5px;
   -moz-transition: border-color 1s ease;
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
@@ -431,6 +422,15 @@ input:hover {
 }
 .admin-hub fieldset a:hover {
   color: rgba(50, 122, 138, 0.75);
+}
+.comment {
+  border: 1px solid;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(200, 200, 255, 0.75);
+  margin-bottom: 10px;
 }
 .comment time {
   float: right;
