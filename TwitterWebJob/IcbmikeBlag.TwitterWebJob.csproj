@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{537C1FEA-672C-4725-A30C-323DFF111BF7}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{381AB4E6-06D7-4753-87BE-5B1CB4587B26}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IcbmikeBlag.Application</RootNamespace>
-    <AssemblyName>IcbmikeBlag.Application</AssemblyName>
+    <RootNamespace>IcbmikeBlag.TwitterWebJob</RootNamespace>
+    <AssemblyName>TwitterWebJob</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -30,12 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\IcbmikeBlag\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\IcbmikeBlag\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.WindowsAzure.Configuration, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.1.7.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll</HintPath>
@@ -53,7 +49,6 @@
       <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,43 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\BlagContext.cs" />
-    <Compile Include="Entities\BlogPost.cs" />
-    <Compile Include="Entities\Comment.cs" />
-    <Compile Include="Entities\User.cs" />
-    <Compile Include="LoremIpsum.cs" />
-    <Compile Include="Migrations\201404190644084_InitialCreate.cs" />
-    <Compile Include="Migrations\201404190644084_InitialCreate.Designer.cs">
-      <DependentUpon>201404190644084_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201404191053276_AddUserEntity.cs" />
-    <Compile Include="Migrations\201404191053276_AddUserEntity.Designer.cs">
-      <DependentUpon>201404191053276_AddUserEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="TwitterWebJob.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\BlogPostRepository.cs" />
-    <Compile Include="Repositories\IBlogPostRepository.cs" />
-    <Compile Include="Repositories\IUserRepository.cs" />
-    <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201404190644084_InitialCreate.resx">
-      <DependentUpon>201404190644084_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201404191053276_AddUserEntity.resx">
-      <DependentUpon>201404191053276_AddUserEntity.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TwitterWebJob\IcbmikeBlag.TwitterWebJob.csproj">
-      <Project>{381ab4e6-06d7-4753-87be-5b1cb4587b26}</Project>
-      <Name>IcbmikeBlag.TwitterWebJob</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

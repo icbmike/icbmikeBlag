@@ -50,3 +50,7 @@ _ReSharper*/
  
 # NCrunch
 *ncrunch*
+
+
+# OSX
+.DS_Store
