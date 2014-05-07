@@ -11,10 +11,12 @@ namespace IcbmikeBlag
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new StyleBundle("~/styles/light").Include(
+                "~/Content/Styles/normalize.css",
                 "~/Content/Styles/lightstyle.css"
                 ));
 
             bundles.Add(new StyleBundle("~/styles/dark").Include(
+                "~/Content/Styles/normalize.css",
                 "~/Content/Styles/tronstyle.css"
                 ));
 
