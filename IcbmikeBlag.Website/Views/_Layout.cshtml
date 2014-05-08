@@ -10,16 +10,13 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     
-    <link href="//fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css">
-    
     @Styles.Render("~/styles/light")  
 
     </head>
 <body>
+        @Html.Partial("_Navbar")
 
     <main id="content">
-        @Html.Partial("_Navbar")
         
         @RenderBody()
     

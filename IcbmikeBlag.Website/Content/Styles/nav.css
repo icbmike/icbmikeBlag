@@ -31,14 +31,50 @@
   color: rgba(50, 122, 138, 0.75);
 }
 nav {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #808080;
   padding-bottom: 7px;
   margin-bottom: 20px;
+  max-width: 800px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+  padding: 10px;
 }
-nav a {
-  display: inline-block;
+nav h2 {
+  display: inline;
+  margin-right: 15px;
+}
+nav ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+@media (min-width: 650px) {
+  nav ul {
+    display: inline;
+  }
+}
+@media (max-width: 650px) {
+  nav ul {
+    clear: right;
+    display: none;
+  }
+}
+nav ul li {
+  vertical-align: middle;
+}
+@media (min-width: 650px) {
+  nav ul li {
+    display: inline-block;
+  }
+}
+@media (max-width: 650px) {
+  nav ul li {
+    display: block;
+  }
+}
+nav ul li a {
   height: 27px;
-  width: 80px;
   border: 1px solid;
   text-align: center;
   vertical-align: middle;
@@ -53,16 +89,26 @@ nav a {
   -webkit-transition: color 1s ease;
   transition: color 1s ease;
 }
-nav a:hover {
+nav ul li a:hover {
   border-color: rgba(50, 122, 138, 0.75);
   color: rgba(50, 122, 138, 0.75);
 }
-nav form {
-  float: right;
+@media (min-width: 650px) {
+  nav ul li a {
+    display: inline-block;
+    width: 80px;
+  }
 }
-nav form .search {
+@media (max-width: 650px) {
+  nav ul li a {
+    display: block;
+  }
+}
+nav ul li form .search {
   padding: 3px;
+  margin-top: 1px;
   border: 1px solid;
+  height: 24px;
   -moz-transition: border-color 1s ease;
   -o-transition: border-color 1s ease;
   -webkit-transition: border-color 1s ease;
@@ -73,7 +119,37 @@ nav form .search {
   -webkit-transition: color 1s ease;
   transition: color 1s ease;
 }
-nav form .search:hover {
+@media (min-width: 650px) {
+  nav ul li form .search {
+    display: inline-block;
+  }
+}
+@media (max-width: 650px) {
+  nav ul li form .search {
+    display: block;
+  }
+}
+nav ul li form .search:hover {
   border-color: rgba(50, 122, 138, 0.75);
   color: rgba(50, 122, 138, 0.75);
+}
+@media (min-width: 501px) {
+  nav ul li.menu-item-right {
+    float: right;
+  }
+}
+nav .menu-toggle-button {
+  width: 50px;
+  height: 50px;
+  float: right;
+}
+@media (min-width: 650px) {
+  nav .menu-toggle-button {
+    display: none;
+  }
+}
+@media (max-width: 650px) {
+  nav .menu-toggle-button {
+    display: inline-block;
+  }
 }

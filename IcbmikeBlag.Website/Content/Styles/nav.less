@@ -1,39 +1,108 @@
 @import "tron-mixins";
+@import "variables";
 
 nav {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #808080;
     padding-bottom: 7px;
     margin-bottom: 20px;
+    max-width: @container-max-width;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    overflow:auto;
+    padding: 10px;
+    h2 {
+        display: inline;
+        margin-right: 15px;
+    }
 
-    a {
-        display: inline-block;
-        height: 27px;
-        width: 80px;
-        border: 1px solid;
-        text-align: center;
-        vertical-align: middle;
-        padding-top:5px;
-        .tron-border;
-        .tron-text;
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        @media (min-width: @responsive-width) {
+            display: inline;
+        }
 
-        &:hover {
-            .tron-border-hover;
-            .tron-text-hover
+        @media (max-width: @responsive-width) {
+            clear: right;
+            display: none; 
+        }
+
+        li {
+            @media (min-width: @responsive-width) {
+                display: inline-block;
+            }
+
+            @media (max-width: @responsive-width) {
+                display: block;
+            }
+            vertical-align:middle;
+            a {
+                height: 27px;
+                border: 1px solid;
+                text-align: center;
+                vertical-align: middle;
+                padding-top: 5px;
+                .tron-border;
+                .tron-text;
+
+                &:hover {
+                    .tron-border-hover;
+                    .tron-text-hover
+                }
+
+                @media (min-width: @responsive-width) {
+                    display: inline-block; width: 80px;
+                }
+
+                @media (max-width: @responsive-width) {
+                    display: block;
+                }
+            }
+
+            form {
+                .search {
+                    padding: 3px;
+                    margin-top:1px;
+                    border: 1px solid;
+                    height: 24px;
+                    .tron-border;
+                    .tron-text;
+
+                    @media (min-width: @responsive-width) {
+                        display: inline-block;
+                    }
+
+                    @media (max-width: @responsive-width) {
+                        display: block;
+                    }
+
+                    &:hover {
+                        .tron-border-hover;
+                        .tron-text-hover;
+                    }
+                }
+            }
+
+            &.menu-item-right {
+                @media (min-width: 501px) {
+                    float: right;
+                }
+            }
         }
     }
 
-    form {
+    .menu-toggle-button {
+        width: 50px;
+        height: 50px;
         float: right;
-        .search {
-            padding: 3px;
-            border: 1px solid;
-            .tron-border;
-            .tron-text;
 
-            &:hover {
-                .tron-border-hover;
-                .tron-text-hover;
-            }
+        @media (min-width: @responsive-width) {
+            display: none;
+        }
+
+        @media (max-width: @responsive-width) {
+            display: inline-block;
         }
     }
 }

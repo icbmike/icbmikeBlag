@@ -1,16 +1,13 @@
 @import "tron-mixins";
+@import "variables";
 
 #content, #content-error {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
+    max-width: @container-max-width;
     min-height: 1000px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 15px;
     margin-top: 0px;
-    .tron-boxshadow;
 
     & > footer {
         border-top: 1px solid white;
@@ -54,15 +51,4 @@ a.gmail-link{
         background-image: url("/Content/Images/gmail-colour.png");
     }
 
-}
-
-#content {
-    &:hover {
-        .tron-boxshadow-hover;
-    }
-}
-#content-error {
-    &:hover {
-        .tron-boxshadow-error-hover;
-    }
 }
