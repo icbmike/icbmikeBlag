@@ -1,0 +1,39 @@
+@import "tron-mixins";
+
+nav {
+    border-bottom: 1px solid white;
+    padding-bottom: 7px;
+    margin-bottom: 20px;
+
+    a {
+        display: inline-block;
+        height: 27px;
+        width: 80px;
+        border: 1px solid;
+        text-align: center;
+        vertical-align: middle;
+        padding-top:5px;
+        .tron-border;
+        .tron-text;
+
+        &:hover {
+            .tron-border-hover;
+            .tron-text-hover
+        }
+    }
+
+    form {
+        float: right;
+        .search {
+            padding: 3px;
+            border: 1px solid;
+            .tron-border;
+            .tron-text;
+
+            &:hover {
+                .tron-border-hover;
+                .tron-text-hover;
+            }
+        }
+    }
+}

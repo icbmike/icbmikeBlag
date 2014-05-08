@@ -1,0 +1,67 @@
+@import "tron-mixins";
+
+.blog-post {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+    header > h1 {
+        font-weight: normal;
+        margin-top: 0px;
+        font-size: 1.5em;
+        color: #ff8d00;
+    }
+
+    header > h1, .date-posted {
+        margin-bottom: 10px;
+        display: inline-block;
+        .tron-text;
+
+        &:hover {
+            .tron-text-hover;
+        }
+    }
+
+
+    .date-posted {
+        float: right;
+    }
+
+    .post-content {
+        line-height: 1.6;
+        padding: 10px;
+        border-bottom: 1px solid #cecece;
+        a {
+            &:link, &:visited, &:active {
+                color: #168ecb;
+                text-decoration: none;
+            }
+            &:hover{
+                color: #168ecb;
+                text-decoration: underline;
+            }
+        }
+    }
+
+
+    footer{
+        margin-top:10px;
+
+        .comments-link, .edit-link{
+            float:right;
+            .tron-text;
+            margin-right:5px;
+            
+            &:hover{
+                .tron-text-hover;
+            }
+        }
+        
+        .tag{
+            .tron-text;
+            &:hover{
+                .tron-text-hover;
+            }
+        }
+    }
+}

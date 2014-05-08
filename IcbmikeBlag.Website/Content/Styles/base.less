@@ -1,0 +1,32 @@
+@import "tron-mixins";
+body {
+    font-family: 'Droid Sans', sans-serif;
+
+}
+
+a:link, a:visited, a:hover, a:active{
+    color: #168ecb;
+    text-decoration: none;
+}
+
+fieldset, hr{
+    border:none;
+}
+
+h1 {
+    margin-top:0px;
+}
+
+.error{
+    color:red;
+}
+
+input{
+    border:1px solid;
+    .tron-border;
+
+    &:hover{
+        .tron-border-hover;
+    }
+}
+

@@ -1,83 +1,3 @@
-body {
-  font-family: 'Droid Sans', sans-serif;
-}
-a:link,
-a:visited,
-a:hover,
-a:active {
-  color: #168ecb;
-  text-decoration: none;
-}
-fieldset,
-hr {
-  border: none;
-}
-h1 {
-  margin-top: 0px;
-}
-#content,
-#content-error {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 800px;
-  min-height: 1000px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 15px;
-  margin-top: 0px;
-  -moz-transition: box-shadow 0.2s ease;
-  -o-transition: box-shadow 0.2s ease;
-  -webkit-transition: box-shadow 0.2s ease;
-  transition: box-shadow 0.2s ease;
-  box-shadow: 0px 11px 22px 6px rgba(255, 255, 255, 0.75);
-}
-#content > footer,
-#content-error > footer {
-  border-top: 1px solid white;
-  margin-top: 50px;
-  text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-#content > footer a,
-#content-error > footer a {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  padding: 0px 3%;
-  text-align: center;
-  -moz-transition: background-image 0.5s ease;
-  -o-transition: background-image 0.5s ease;
-  -webkit-transition: background-image 0.5s ease;
-  transition: background-image 0.5s ease;
-  -moz-background-size: auto 100%;
-  background-size: auto 100%;
-}
-a.twitter-link {
-  background: url("/Content/Images/twitter-grayscale.png") no-repeat;
-}
-a.twitter-link:hover {
-  background-image: url("/Content/Images/twitter-colour.png");
-}
-a.github-link {
-  background: url("/Content/Images/octocat-grayscale.png") no-repeat;
-}
-a.github-link:hover {
-  background-image: url("/Content/Images/octocat-colour.png");
-}
-a.gmail-link {
-  background: url("/Content/Images/gmail-grayscale.png") no-repeat;
-}
-a.gmail-link:hover {
-  background-image: url("/Content/Images/gmail-colour.png");
-}
-#content:hover {
-  box-shadow: 0px 11px 22px 6px rgba(50, 122, 138, 0.75);
-}
-#content-error:hover {
-  box-shadow: 0px 11px 22px 6px rgba(255, 20, 20, 0.75);
-}
 .tron-boxshadow {
   -moz-transition: box-shadow 0.2s ease;
   -o-transition: box-shadow 0.2s ease;
@@ -110,72 +30,36 @@ a.gmail-link:hover {
 .tron-text-hover {
   color: rgba(50, 122, 138, 0.75);
 }
-article {
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 40px;
+body {
+  font-family: 'Droid Sans', sans-serif;
 }
-article header > h1 {
-  font-weight: normal;
-  margin-top: 0px;
-  font-size: 1.5em;
-  color: #ff8d00;
-}
-article header > h1,
-article .date-posted {
-  margin-bottom: 10px;
-  display: inline-block;
-  -moz-transition: color 1s ease;
-  -o-transition: color 1s ease;
-  -webkit-transition: color 1s ease;
-  transition: color 1s ease;
-}
-article header > h1:hover,
-article .date-posted:hover {
-  color: rgba(50, 122, 138, 0.75);
-}
-article .date-posted {
-  float: right;
-}
-article .post-content {
-  line-height: 1.6;
-  padding: 10px;
-  border-bottom: 1px solid #cecece;
-}
-article .post-content a:link,
-article .post-content a:visited,
-article .post-content a:active {
+a:link,
+a:visited,
+a:hover,
+a:active {
   color: #168ecb;
   text-decoration: none;
 }
-article .post-content a:hover {
-  color: #168ecb;
-  text-decoration: underline;
+fieldset,
+hr {
+  border: none;
 }
-article footer {
-  margin-top: 10px;
+h1 {
+  margin-top: 0px;
 }
-article footer .comments-link,
-article footer .edit-link {
-  float: right;
-  -moz-transition: color 1s ease;
-  -o-transition: color 1s ease;
-  -webkit-transition: color 1s ease;
-  transition: color 1s ease;
-  margin-right: 5px;
+.error {
+  color: red;
 }
-article footer .comments-link:hover,
-article footer .edit-link:hover {
-  color: rgba(50, 122, 138, 0.75);
+input {
+  border: 1px solid;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(200, 200, 255, 0.75);
 }
-article footer .tag {
-  -moz-transition: color 1s ease;
-  -o-transition: color 1s ease;
-  -webkit-transition: color 1s ease;
-  transition: color 1s ease;
-}
-article footer .tag:hover {
-  color: rgba(50, 122, 138, 0.75);
+input:hover {
+  border-color: rgba(50, 122, 138, 0.75);
 }
 nav {
   border-bottom: 1px solid white;
@@ -224,6 +108,73 @@ nav form .search:hover {
   border-color: rgba(50, 122, 138, 0.75);
   color: rgba(50, 122, 138, 0.75);
 }
+.blog-post {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.blog-post header > h1 {
+  font-weight: normal;
+  margin-top: 0px;
+  font-size: 1.5em;
+  color: #ff8d00;
+}
+.blog-post header > h1,
+.blog-post .date-posted {
+  margin-bottom: 10px;
+  display: inline-block;
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+}
+.blog-post header > h1:hover,
+.blog-post .date-posted:hover {
+  color: rgba(50, 122, 138, 0.75);
+}
+.blog-post .date-posted {
+  float: right;
+}
+.blog-post .post-content {
+  line-height: 1.6;
+  padding: 10px;
+  border-bottom: 1px solid #cecece;
+}
+.blog-post .post-content a:link,
+.blog-post .post-content a:visited,
+.blog-post .post-content a:active {
+  color: #168ecb;
+  text-decoration: none;
+}
+.blog-post .post-content a:hover {
+  color: #168ecb;
+  text-decoration: underline;
+}
+.blog-post footer {
+  margin-top: 10px;
+}
+.blog-post footer .comments-link,
+.blog-post footer .edit-link {
+  float: right;
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+  margin-right: 5px;
+}
+.blog-post footer .comments-link:hover,
+.blog-post footer .edit-link:hover {
+  color: rgba(50, 122, 138, 0.75);
+}
+.blog-post footer .tag {
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+}
+.blog-post footer .tag:hover {
+  color: rgba(50, 122, 138, 0.75);
+}
 .login-box {
   margin: 30px auto 0px auto;
   position: relative;
@@ -269,9 +220,6 @@ nav form .search:hover {
 .login-box input[type=submit] {
   float: right;
   display: inline-block;
-}
-.error {
-  color: red;
 }
 .post-editor {
   padding: 10px;
@@ -366,40 +314,6 @@ nav form .search:hover {
 .reply-editor textarea:focus {
   border-color: rgba(50, 122, 138, 0.75);
 }
-button,
-input[type="submit"],
-input[type="button"] {
-  width: 80px;
-  height: 30px;
-  border: 1px solid;
-  cursor: pointer;
-  -moz-transition: border-color 1s ease;
-  -o-transition: border-color 1s ease;
-  -webkit-transition: border-color 1s ease;
-  transition: border-color 1s ease;
-  border-color: rgba(200, 200, 255, 0.75);
-  -moz-transition: color 1s ease;
-  -o-transition: color 1s ease;
-  -webkit-transition: color 1s ease;
-  transition: color 1s ease;
-}
-button:hover,
-input[type="submit"]:hover,
-input[type="button"]:hover {
-  border-color: rgba(50, 122, 138, 0.75);
-  color: rgba(50, 122, 138, 0.75);
-}
-input {
-  border: 1px solid;
-  -moz-transition: border-color 1s ease;
-  -o-transition: border-color 1s ease;
-  -webkit-transition: border-color 1s ease;
-  transition: border-color 1s ease;
-  border-color: rgba(200, 200, 255, 0.75);
-}
-input:hover {
-  border-color: rgba(50, 122, 138, 0.75);
-}
 .admin-hub fieldset {
   border: 1px solid;
   margin-top: 20px;
@@ -422,27 +336,6 @@ input:hover {
 }
 .admin-hub fieldset a:hover {
   color: rgba(50, 122, 138, 0.75);
-}
-.comment {
-  border: 1px solid;
-  -moz-transition: border-color 1s ease;
-  -o-transition: border-color 1s ease;
-  -webkit-transition: border-color 1s ease;
-  transition: border-color 1s ease;
-  border-color: rgba(200, 200, 255, 0.75);
-  margin-bottom: 10px;
-}
-.comment time {
-  float: right;
-}
-.comment h1 {
-  font-size: 16px;
-  color: black;
-}
-.comment header a {
-  float: right;
-  margin-right: 5px;
-  color: #168ecb;
 }
 .archive-tree {
   padding-top: 10px;
@@ -475,4 +368,90 @@ input:hover {
 }
 .archive-tree > li:not(:first-child) > ul {
   display: none;
+}
+button,
+input[type="submit"],
+input[type="button"] {
+  width: 80px;
+  height: 30px;
+  border: 1px solid;
+  cursor: pointer;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border-color: rgba(200, 200, 255, 0.75);
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+}
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  border-color: rgba(50, 122, 138, 0.75);
+  color: rgba(50, 122, 138, 0.75);
+}
+#content,
+#content-error {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  min-height: 1000px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  margin-top: 0px;
+  -moz-transition: box-shadow 0.2s ease;
+  -o-transition: box-shadow 0.2s ease;
+  -webkit-transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
+  box-shadow: 0px 11px 22px 6px rgba(255, 255, 255, 0.75);
+}
+#content > footer,
+#content-error > footer {
+  border-top: 1px solid white;
+  margin-top: 50px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#content > footer a,
+#content-error > footer a {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  padding: 0px 3%;
+  text-align: center;
+  -moz-transition: background-image 0.5s ease;
+  -o-transition: background-image 0.5s ease;
+  -webkit-transition: background-image 0.5s ease;
+  transition: background-image 0.5s ease;
+  -moz-background-size: auto 100%;
+  background-size: auto 100%;
+}
+a.twitter-link {
+  background: url("/Content/Images/twitter-grayscale.png") no-repeat;
+}
+a.twitter-link:hover {
+  background-image: url("/Content/Images/twitter-colour.png");
+}
+a.github-link {
+  background: url("/Content/Images/octocat-grayscale.png") no-repeat;
+}
+a.github-link:hover {
+  background-image: url("/Content/Images/octocat-colour.png");
+}
+a.gmail-link {
+  background: url("/Content/Images/gmail-grayscale.png") no-repeat;
+}
+a.gmail-link:hover {
+  background-image: url("/Content/Images/gmail-colour.png");
+}
+#content:hover {
+  box-shadow: 0px 11px 22px 6px rgba(50, 122, 138, 0.75);
+}
+#content-error:hover {
+  box-shadow: 0px 11px 22px 6px rgba(255, 20, 20, 0.75);
 }
