@@ -128,12 +128,6 @@ namespace IcbmikeBlag.Controllers
             throw new NotImplementedException();
         }
 
-        [Authorize]
-        public ActionResult ToggleSiteStyle(StyleToggleModel model)
-        {
-
-            ConfigurationManager.AppSettings["SiteStyle"] = model.Style;
-            return RedirectToAction("Index");
-        }
+      
     }
 }

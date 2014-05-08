@@ -42,4 +42,20 @@
         }
     });
 
+    //Responsive Nav
+    $('.menu-toggle-button').on('click', function () {
+        $(this).siblings('ul').slideToggle();
+    });
+
+    $(window).on('resize', function() {
+
+        if ($(window).width() > 500) {
+            //Desktop
+            $('nav ul').css('display', 'inline');
+        } else {
+            //Mobile
+            $('nav ul').css('display', 'none');
+        }
+    });
+
 });

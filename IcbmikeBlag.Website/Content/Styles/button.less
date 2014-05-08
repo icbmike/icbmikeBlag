@@ -1,0 +1,14 @@
+@import "tron-mixins";
+
+button, input[type="submit"], input[type="button"]{
+     width: 80px;
+        height: 30px;
+        border: 1px solid;
+        cursor:pointer;
+        .tron-border;
+        .tron-text;
+        &:hover{
+            .tron-border-hover;
+            .tron-text-hover;
+        }
+}

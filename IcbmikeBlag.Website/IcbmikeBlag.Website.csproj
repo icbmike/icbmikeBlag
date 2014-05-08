@@ -139,18 +139,73 @@
     <Content Include="Content\Scripts\jquery\jquery-1.11.0.js" />
     <Content Include="Content\Scripts\jquery\jquery.debounce-1.0.5.js" />
     <Content Include="Content\Scripts\main.js" />
+    <Content Include="Content\Styles\admin-hub.css">
+      <DependentUpon>admin-hub.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\admin-hub.min.css">
+      <DependentUpon>admin-hub.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\archive-tree.css">
+      <DependentUpon>archive-tree.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\archive-tree.min.css">
+      <DependentUpon>archive-tree.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\base.css">
+      <DependentUpon>base.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\base.min.css">
+      <DependentUpon>base.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\blog-post.css">
+      <DependentUpon>blog-post.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\blog-post.min.css">
+      <DependentUpon>blog-post.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\button.css">
+      <DependentUpon>button.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\button.min.css">
+      <DependentUpon>button.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\comment.css">
+      <DependentUpon>comment.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\comment.min.css">
+      <DependentUpon>comment.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\container.css">
+      <DependentUpon>container.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\container.min.css">
+      <DependentUpon>container.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\editors.css">
+      <DependentUpon>editors.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\editors.min.css">
+      <DependentUpon>editors.less</DependentUpon>
+    </Content>
     <Content Include="Content\Styles\lightstyle.css">
       <DependentUpon>lightstyle.less</DependentUpon>
     </Content>
     <Content Include="Content\Styles\lightstyle.min.css">
       <DependentUpon>lightstyle.less</DependentUpon>
     </Content>
-    <Content Include="Content\Styles\tronstyle.css">
-      <DependentUpon>tronstyle.less</DependentUpon>
+    <Content Include="Content\Styles\login-box.css">
+      <DependentUpon>login-box.less</DependentUpon>
     </Content>
-    <Content Include="Content\Styles\tronstyle.min.css">
-      <DependentUpon>tronstyle.less</DependentUpon>
+    <Content Include="Content\Styles\login-box.min.css">
+      <DependentUpon>login-box.less</DependentUpon>
     </Content>
+    <Content Include="Content\Styles\nav.css">
+      <DependentUpon>nav.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\nav.min.css">
+      <DependentUpon>nav.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\normalize.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -187,7 +242,6 @@
     <Content Include="Views\_Layout.cshtml" />
     <Content Include="Views\Posts\Index.cshtml" />
     <Content Include="Views\Posts\_Post.cshtml" />
-    <Content Include="Content\Styles\tronstyle.less" />
     <Content Include="Views\Archive\Index.cshtml" />
     <Content Include="Views\Shared\_Navbar.cshtml" />
     <Content Include="Views\Admin\Login.cshtml" />
@@ -201,7 +255,17 @@
     <Content Include="Views\Posts\_Reply.cshtml" />
     <Content Include="Views\Posts\Archive.cshtml" />
     <Content Include="Content\Styles\lightstyle.less" />
-    <Content Include="Views\Admin\_StyleToggle.cshtml" />
+    <Content Include="Content\Styles\nav.less" />
+    <Content Include="Content\Styles\tron-mixins.less" />
+    <Content Include="Content\Styles\blog-post.less" />
+    <Content Include="Content\Styles\login-box.less" />
+    <Content Include="Content\Styles\editors.less" />
+    <Content Include="Content\Styles\comment.less" />
+    <Content Include="Content\Styles\archive-tree.less" />
+    <Content Include="Content\Styles\admin-hub.less" />
+    <Content Include="Content\Styles\button.less" />
+    <Content Include="Content\Styles\container.less" />
+    <Content Include="Content\Styles\base.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
