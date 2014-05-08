@@ -1,0 +1,41 @@
+@import "tron-mixins";
+
+.login-box{
+    margin: 30px auto 0px auto;
+    position:relative;
+    border: 1px solid;
+    width: 250px;
+    padding: 20px;
+    padding-bottom:50px;
+    .tron-border;
+
+    &:hover{
+        .tron-border-hover;
+    }
+
+    & div{
+        margin-bottom: 10px;
+        & label{
+            display: inline-block;
+            width: 85px;
+            .tron-text;
+            &:hover{
+                .tron-text-hover;
+            }
+        }
+        & input {
+
+            padding:3px;
+            border: 1px solid;
+            .tron-border;
+            &:hover{
+                .tron-border-hover
+            }
+        }
+    }
+    & input[type=submit]{
+        float:right;
+        display: inline-block;
+       
+    }   
+}

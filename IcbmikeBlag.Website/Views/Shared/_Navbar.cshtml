@@ -1,16 +1,25 @@
 ﻿@model IcbmikeBlag.Models.BlagModelBase
 
 <nav>
-    
-    @Html.ActionLink("Home", "Index", "Posts")
-    @Html.ActionLink("Archive", "Archive", "Posts")
+    <h2>ICBMike Blag</h2>
+    <button class="menu-toggle-button">v</button>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Posts")</li>
+        <li>@Html.ActionLink("Archive", "Archive", "Posts")</li>
             
-    @if (Model.IsAuthenticated)
+        @if (Model.IsAuthenticated)
         {
-            @Html.ActionLink("Admin", "Index", "Admin")
+            <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
         }
 
-    @using(Html.BeginForm("Search", "Posts", FormMethod.Get)){
-        <input class="search" type="text" name="searchterm" placeholder="Search..." />
-    }
+        <li class="menu-item-right">
+            @using (Html.BeginForm("Search", "Posts", FormMethod.Get))
+            {
+                <input class="search" type="text" name="searchterm" placeholder="Search..." />
+            }
+        </li>
+    </ul>
+    
+    
+
 </nav>

@@ -1,7 +1,7 @@
 ﻿@using WebGrease.Css.Extensions
 @model IcbmikeBlag.Models.Post.PostModel
 
-<article>
+<article class="blog-post">
     <header>
         <h1 class="title">@Model.Title</h1><time class="date-posted">@Model.DatePosted.ToShortDateString() @Model.DatePosted.ToShortTimeString()</time>
     </header>
