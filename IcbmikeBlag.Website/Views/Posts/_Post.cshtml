@@ -21,14 +21,15 @@
         
         @Html.ActionLink("Comments", "Post", "Posts", new {id = Model.ID}, new{@class="comments-link"})
         
+         @if (Model.IsAuthenticated)
+        {
+            @Html.ActionLink("Edit", "CreateOrEditPost", "Admin", new {id = Model.ID}, new {@class = "edit-link"})
+        }
+
         @if (Model.ReplyModel != null)
         {
             @Html.Partial("_Reply", Model.ReplyModel)
         }
-
-        @if (Model.IsAuthenticated)
-        {
-            @Html.ActionLink("Edit", "CreateOrEditPost", "Admin", new {id = Model.ID}, new {@class = "edit-link"})
-        }
+       
     </footer>
 </article>

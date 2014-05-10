@@ -44,12 +44,13 @@
 
     //Responsive Nav
     $('.menu-toggle-button').on('click', function () {
+        console.log('wtf');
         $(this).siblings('ul').slideToggle();
     });
 
     $(window).on('resize', function() {
 
-        if ($(window).width() > 500) {
+        if ($(window).width() > 650) {
             //Desktop
             $('nav ul').css('display', 'inline');
         } else {

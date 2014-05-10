@@ -32,6 +32,7 @@
 }
 @media (min-width: 650px) {
   .float-or-stack {
+    display: inline-block;
     float: right;
   }
 }
@@ -39,34 +40,4 @@
   .float-or-stack {
     display: block;
   }
-}
-.comment {
-  border: 1px solid;
-  -moz-transition: border-color 1s ease;
-  -o-transition: border-color 1s ease;
-  -webkit-transition: border-color 1s ease;
-  transition: border-color 1s ease;
-  border-color: rgba(200, 200, 255, 0.75);
-  margin-bottom: 10px;
-  padding: 10px;
-}
-@media (min-width: 650px) {
-  .comment time {
-    float: right;
-  }
-}
-@media (max-width: 650px) {
-  .comment time {
-    display: block;
-  }
-}
-.comment h2 {
-  font-size: 16px;
-  color: black;
-  display: inline;
-}
-.comment header a {
-  float: right;
-  margin-right: 5px;
-  color: #168ecb;
 }
