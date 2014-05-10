@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.Remoting.Messaging;
+using System.ServiceModel.Syndication;
 using System.Web.Http.ExceptionHandling;
 using System.Web.Http.Validation.Validators;
 using System.Web.Mvc;
@@ -204,6 +205,26 @@ namespace IcbmikeBlag.Controllers
             });
 
             return RedirectToAction("Post", new {id = model.PostID});
+        }
+
+        public RSSResult RssFeed()
+        {
+            var items = _postRepository.ListBlogPosts()
+                .Select(post => new SyndicationItem(
+                    post.Title, 
+                    Url.Action("Post", "Posts", new{id = post.ID}),
+                    new Uri(Url.Action("Post", "Posts", new{id = post.ID}, Request.Url.Scheme)),
+                    post.ID.ToString(),
+                    post.DatePosted
+                    )
+                );
+            
+            return new RSSResult(
+                new SyndicationFeed(
+                    "ICBMikeBlag",
+                    "A blog by Mike Little. Technical and personal, sometimes both.",
+                    new Uri("https://blag.icbmike.com"),
+                    items));
         }
     }
 }
