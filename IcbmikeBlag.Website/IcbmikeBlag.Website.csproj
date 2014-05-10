@@ -187,6 +187,9 @@
     <Content Include="Content\Styles\editors.min.css">
       <DependentUpon>editors.less</DependentUpon>
     </Content>
+    <Content Include="Content\Styles\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\Styles\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\Styles\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Styles\lightstyle.css">
       <DependentUpon>lightstyle.less</DependentUpon>
     </Content>
@@ -206,6 +209,18 @@
       <DependentUpon>nav.less</DependentUpon>
     </Content>
     <Content Include="Content\Styles\normalize.css" />
+    <Content Include="Content\Styles\tron-mixins.css">
+      <DependentUpon>tron-mixins.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\tron-mixins.min.css">
+      <DependentUpon>tron-mixins.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\variables.css">
+      <DependentUpon>variables.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\variables.min.css">
+      <DependentUpon>variables.less</DependentUpon>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -266,6 +281,24 @@
     <Content Include="Content\Styles\button.less" />
     <Content Include="Content\Styles\container.less" />
     <Content Include="Content\Styles\base.less" />
+    <Content Include="Content\Styles\variables.less" />
+    <Content Include="Content\Styles\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Styles\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Styles\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Styles\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\Styles\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Content\Styles\font-awesome\less\core.less" />
+    <Content Include="Content\Styles\font-awesome\less\fixed-width.less" />
+    <Content Include="Content\Styles\font-awesome\less\font-awesome.less" />
+    <Content Include="Content\Styles\font-awesome\less\icons.less" />
+    <Content Include="Content\Styles\font-awesome\less\larger.less" />
+    <Content Include="Content\Styles\font-awesome\less\list.less" />
+    <Content Include="Content\Styles\font-awesome\less\mixins.less" />
+    <Content Include="Content\Styles\font-awesome\less\path.less" />
+    <Content Include="Content\Styles\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Content\Styles\font-awesome\less\spinning.less" />
+    <Content Include="Content\Styles\font-awesome\less\stacked.less" />
+    <Content Include="Content\Styles\font-awesome\less\variables.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

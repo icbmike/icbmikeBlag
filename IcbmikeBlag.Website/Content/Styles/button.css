@@ -30,6 +30,16 @@
 .tron-text-hover {
   color: rgba(50, 122, 138, 0.75);
 }
+@media (min-width: 650px) {
+  .float-or-stack {
+    float: right;
+  }
+}
+@media (max-width: 650px) {
+  .float-or-stack {
+    display: block;
+  }
+}
 button,
 input[type="submit"],
 input[type="button"] {

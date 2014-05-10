@@ -1,37 +1,42 @@
+@import "variables";
 @import "tron-mixins";
 
-.post-editor{
-    padding:10px;
+.post-editor {
+    padding: 10px;
     border: 1px solid;
     .tron-border;
-    &:hover{
+
+    &:hover {
         .tron-border-hover;
     }
 
-    
 
-    div{
+
+    div {
         margin-bottom: 7px;
     }
-    .content{
-        width:100%;
-        height:500px;
 
+    .content {
+        width: 100%;
+        height: 500px;
         border: 1px solid;
         .tron-border;
-        margin-top:10px;
+        margin-top: 10px;
         margin-bottom: 10px;
-        &:hover, &:focus{
+
+        &:hover, &:focus {
             .tron-border-hover;
         }
     }
-    .post-preview{
-        border:1px solid;
+
+    .post-preview {
+        border: 1px solid;
         .tron-border;
-        min-height:50px;
+        min-height: 50px;
         margin-bottom: 10px;
         padding: 10px;
-        &:hover{
+
+        &:hover {
             .tron-border-hover;
         }
 
@@ -40,18 +45,20 @@
                 color: #168ecb;
                 text-decoration: none;
             }
-            &:hover{
+
+            &:hover {
                 color: #168ecb;
                 text-decoration: underline;
             }
         }
     }
 
-    .tags{
+    .tags {
         width: 300px;
     }
-    .button{
-        float:right;
+
+    .button {
+        .float-or-stack;
     }
 }
 

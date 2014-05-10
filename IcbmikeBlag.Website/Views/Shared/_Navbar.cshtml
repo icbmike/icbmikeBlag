@@ -1,8 +1,8 @@
 ﻿@model IcbmikeBlag.Models.BlagModelBase
 
 <nav>
-    <h2>ICBMike Blag</h2>
-    <button class="menu-toggle-button">v</button>
+    <a href="@Url.Action("Index", "Posts")"><h2>ICBMike Blag</h2></a>
+    <button class="menu-toggle-button"><i class="fa fa-bars"></i></button>
     <ul>
         <li>@Html.ActionLink("Home", "Index", "Posts")</li>
         <li>@Html.ActionLink("Archive", "Archive", "Posts")</li>

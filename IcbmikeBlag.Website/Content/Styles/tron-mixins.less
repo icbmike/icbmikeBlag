@@ -1,4 +1,4 @@
-
+@import "variables";
 .tron-boxshadow {
     -moz-transition: box-shadow 0.2s ease;
     -o-transition: box-shadow 0.2s ease;
@@ -34,4 +34,15 @@
 }
 .tron-text-hover{
     color: rgba(50,122,138, 0.75);
+}
+
+.float-or-stack {
+    @media (min-width: @responsive-width) {
+        display:inline-block;
+        float:right;
+    }
+
+    @media (max-width: @responsive-width) {
+        display:block;
+    }
 }

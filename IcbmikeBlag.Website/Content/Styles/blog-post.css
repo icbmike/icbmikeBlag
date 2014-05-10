@@ -30,8 +30,17 @@
 .tron-text-hover {
   color: rgba(50, 122, 138, 0.75);
 }
+@media (min-width: 650px) {
+  .float-or-stack {
+    float: right;
+  }
+}
+@media (max-width: 650px) {
+  .float-or-stack {
+    display: block;
+  }
+}
 .blog-post {
-  padding: 0px 10px;
   margin-top: 10px;
   margin-bottom: 40px;
 }
@@ -54,8 +63,15 @@
 .blog-post .date-posted:hover {
   color: rgba(50, 122, 138, 0.75);
 }
-.blog-post .date-posted {
-  float: right;
+@media (min-width: 650px) {
+  .blog-post .date-posted {
+    float: right;
+  }
+}
+@media (max-width: 650px) {
+  .blog-post .date-posted {
+    display: block;
+  }
 }
 .blog-post .post-content {
   line-height: 1.6;
