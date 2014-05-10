@@ -14,7 +14,6 @@ namespace IcbmikeBlag
                 "~/Content/Styles/lightstyle.css"
                 ));
 
-
             bundles.Add(new ScriptBundle("~/js/jquery").Include(
                 "~/Content/Scripts/jquery/jquery-1.11.0.js",
                 "~/Content/Scripts/jquery/jquery.debounce-1.0.5.js"
