@@ -11,9 +11,11 @@ nav {
     margin-right: auto;
     overflow:auto;
     padding: 10px;
+
     h2 {
         display: inline;
         margin-right: 15px;
+        color:black;
     }
 
     ul {
@@ -63,18 +65,21 @@ nav {
             form {
                 .search {
                     padding: 3px;
-                    margin-top:1px;
+                    box-sizing : border-box;
                     border: 1px solid;
-                    height: 24px;
+                    height: 27px;
                     .tron-border;
                     .tron-text;
 
                     @media (min-width: @responsive-width) {
                         display: inline-block;
+                        margin-top:1px;
                     }
 
                     @media (max-width: @responsive-width) {
                         display: block;
+                        width: 100%;
+                        margin-top:0px;
                     }
 
                     &:hover {
@@ -85,7 +90,7 @@ nav {
             }
 
             &.menu-item-right {
-                @media (min-width: 501px) {
+                @media (min-width:  @responsive-width) {
                     float: right;
                 }
             }
@@ -94,9 +99,9 @@ nav {
 
     .menu-toggle-button {
         width: 50px;
-        height: 50px;
+        height: 40px;
         float: right;
-
+        font-size: 20px;
         @media (min-width: @responsive-width) {
             display: none;
         }

@@ -30,6 +30,16 @@
 .tron-text-hover {
   color: rgba(50, 122, 138, 0.75);
 }
+@media (min-width: 650px) {
+  .float-or-stack {
+    float: right;
+  }
+}
+@media (max-width: 650px) {
+  .float-or-stack {
+    display: block;
+  }
+}
 .post-editor {
   padding: 10px;
   border: 1px solid;
@@ -88,8 +98,15 @@
 .post-editor .tags {
   width: 300px;
 }
-.post-editor .button {
-  float: right;
+@media (min-width: 650px) {
+  .post-editor .button {
+    float: right;
+  }
+}
+@media (max-width: 650px) {
+  .post-editor .button {
+    display: block;
+  }
 }
 .reply-editor {
   border: 1px solid;
