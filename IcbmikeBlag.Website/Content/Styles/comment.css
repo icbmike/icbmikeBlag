@@ -32,6 +32,7 @@
 }
 @media (min-width: 650px) {
   .float-or-stack {
+    display: inline-block;
     float: right;
   }
 }
@@ -52,6 +53,7 @@
 }
 @media (min-width: 650px) {
   .comment time {
+    display: inline-block;
     float: right;
   }
 }

@@ -32,6 +32,7 @@
 }
 @media (min-width: 650px) {
   .float-or-stack {
+    display: inline-block;
     float: right;
   }
 }
@@ -65,6 +66,7 @@
 }
 @media (min-width: 650px) {
   .blog-post .date-posted {
+    display: inline-block;
     float: right;
   }
 }
