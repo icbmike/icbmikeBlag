@@ -141,10 +141,10 @@
     <Content Include="Content\Scripts\jquery\jquery.debounce-1.0.5.js" />
     <Content Include="Content\Scripts\main.js" />
     <Content Include="Content\Styles\admin-hub.css">
-      <DependentUpon>admin-hub.less</DependentUpon>
+      <DependentUpon>_admin-hub.less</DependentUpon>
     </Content>
     <Content Include="Content\Styles\admin-hub.min.css">
-      <DependentUpon>admin-hub.less</DependentUpon>
+      <DependentUpon>_admin-hub.less</DependentUpon>
     </Content>
     <Content Include="Content\Styles\archive-tree.css">
       <DependentUpon>archive-tree.less</DependentUpon>
@@ -279,7 +279,7 @@
     <Content Include="Content\Styles\editors.less" />
     <Content Include="Content\Styles\comment.less" />
     <Content Include="Content\Styles\archive-tree.less" />
-    <Content Include="Content\Styles\admin-hub.less" />
+    <Content Include="Content\Styles\_admin-hub.less" />
     <Content Include="Content\Styles\button.less" />
     <Content Include="Content\Styles\container.less" />
     <Content Include="Content\Styles\base.less" />

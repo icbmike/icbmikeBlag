@@ -211,8 +211,8 @@ namespace IcbmikeBlag.Controllers
         {
             var items = _postRepository.ListBlogPosts()
                 .Select(post => new SyndicationItem(
-                    post.Title, 
-                    Url.Action("Post", "Posts", new{id = post.ID}),
+                    post.Title,
+                    Url.Action("Post", "Posts", new { id = post.ID }, Request.Url.Scheme),
                     new Uri(Url.Action("Post", "Posts", new{id = post.ID}, Request.Url.Scheme)),
                     post.ID.ToString(),
                     post.DatePosted
