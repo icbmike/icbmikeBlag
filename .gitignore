@@ -33,6 +33,7 @@ rcf/
 ## Useful whenever working as part of a team or on software (like open source) that others will download
 *.suo
 *.user
+*.DotSettings
  
 # Access Control Service integration (via FedUtil or Add STS Reference from VS2010) will create FederationMetadata.xml below this folder
 ##=> looks like FederationMetadata.xml is referenced in csproj, so need it in source control
