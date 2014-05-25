@@ -10,7 +10,7 @@ namespace IcbmikeBlag.Application.DAL
 {
     public class BlagContext : DbContext
     {
-        public BlagContext() : base("blagDB")
+        public BlagContext() : base("blagDBConnectionString")
         {
          
         }
