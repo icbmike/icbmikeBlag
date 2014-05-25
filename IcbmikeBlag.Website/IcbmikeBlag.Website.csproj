@@ -140,54 +140,6 @@
     <Content Include="Content\Scripts\jquery\jquery-1.11.0.js" />
     <Content Include="Content\Scripts\jquery\jquery.debounce-1.0.5.js" />
     <Content Include="Content\Scripts\main.js" />
-    <Content Include="Content\Styles\admin-hub.css">
-      <DependentUpon>admin-hub.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\admin-hub.min.css">
-      <DependentUpon>admin-hub.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\archive-tree.css">
-      <DependentUpon>archive-tree.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\archive-tree.min.css">
-      <DependentUpon>archive-tree.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\base.css">
-      <DependentUpon>base.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\base.min.css">
-      <DependentUpon>base.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\blog-post.css">
-      <DependentUpon>blog-post.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\blog-post.min.css">
-      <DependentUpon>blog-post.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\button.css">
-      <DependentUpon>button.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\button.min.css">
-      <DependentUpon>button.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\comment.css">
-      <DependentUpon>comment.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\comment.min.css">
-      <DependentUpon>comment.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\container.css">
-      <DependentUpon>container.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\container.min.css">
-      <DependentUpon>container.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\editors.css">
-      <DependentUpon>editors.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\editors.min.css">
-      <DependentUpon>editors.less</DependentUpon>
-    </Content>
     <Content Include="Content\Styles\font-awesome\css\font-awesome.css" />
     <Content Include="Content\Styles\font-awesome\css\font-awesome.min.css" />
     <Content Include="Content\Styles\font-awesome\fonts\fontawesome-webfont.svg" />
@@ -197,31 +149,7 @@
     <Content Include="Content\Styles\lightstyle.min.css">
       <DependentUpon>lightstyle.less</DependentUpon>
     </Content>
-    <Content Include="Content\Styles\login-box.css">
-      <DependentUpon>login-box.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\login-box.min.css">
-      <DependentUpon>login-box.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\nav.css">
-      <DependentUpon>nav.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\nav.min.css">
-      <DependentUpon>nav.less</DependentUpon>
-    </Content>
     <Content Include="Content\Styles\normalize.css" />
-    <Content Include="Content\Styles\tron-mixins.css">
-      <DependentUpon>tron-mixins.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\tron-mixins.min.css">
-      <DependentUpon>tron-mixins.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\variables.css">
-      <DependentUpon>variables.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\variables.min.css">
-      <DependentUpon>variables.less</DependentUpon>
-    </Content>
     <Content Include="Global.asax" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -272,18 +200,18 @@
     <Content Include="Views\Posts\_Reply.cshtml" />
     <Content Include="Views\Posts\Archive.cshtml" />
     <Content Include="Content\Styles\lightstyle.less" />
-    <Content Include="Content\Styles\nav.less" />
-    <Content Include="Content\Styles\tron-mixins.less" />
-    <Content Include="Content\Styles\blog-post.less" />
-    <Content Include="Content\Styles\login-box.less" />
-    <Content Include="Content\Styles\editors.less" />
-    <Content Include="Content\Styles\comment.less" />
-    <Content Include="Content\Styles\archive-tree.less" />
-    <Content Include="Content\Styles\admin-hub.less" />
-    <Content Include="Content\Styles\button.less" />
-    <Content Include="Content\Styles\container.less" />
-    <Content Include="Content\Styles\base.less" />
-    <Content Include="Content\Styles\variables.less" />
+    <Content Include="Content\Styles\_nav.less" />
+    <Content Include="Content\Styles\_mixins.less" />
+    <Content Include="Content\Styles\_blog-post.less" />
+    <Content Include="Content\Styles\_login-box.less" />
+    <Content Include="Content\Styles\_editors.less" />
+    <Content Include="Content\Styles\_comment.less" />
+    <Content Include="Content\Styles\_archive-tree.less" />
+    <Content Include="Content\Styles\_admin-hub.less" />
+    <Content Include="Content\Styles\_button.less" />
+    <Content Include="Content\Styles\_container.less" />
+    <Content Include="Content\Styles\_base.less" />
+    <Content Include="Content\Styles\_variables.less" />
     <Content Include="Content\Styles\font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\Styles\font-awesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\Styles\font-awesome\fonts\fontawesome-webfont.woff" />
