@@ -10,6 +10,7 @@
         @if (Model.IsAuthenticated)
         {
             <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
+            <li>@Html.ActionLink("Sign Out", "SignOut", "Admin")</li>
         }
 
         <li class="menu-item-right">

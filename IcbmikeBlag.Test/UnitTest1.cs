@@ -12,7 +12,7 @@ namespace IcbmikeBlag.Test
         [TestMethod]
         public void TestMethod1()
         {
-           
+          
         }
     }
 }
