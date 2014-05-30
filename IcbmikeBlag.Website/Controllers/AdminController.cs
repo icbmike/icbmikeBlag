@@ -128,6 +128,13 @@ namespace IcbmikeBlag.Controllers
             throw new NotImplementedException();
         }
 
-      
+        [Authorize]
+        public ActionResult SignOut()
+        {
+            FormsAuthentication.SignOut();
+
+            //Redirect to home page
+            return RedirectToAction("Index", "Posts");
+        }
     }
 }
