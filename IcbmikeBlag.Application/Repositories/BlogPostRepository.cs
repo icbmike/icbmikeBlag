@@ -2,16 +2,19 @@
 using System.Linq;
 using IcbmikeBlag.Application.DAL;
 using IcbmikeBlag.Application.Entities;
+using IcbmikeBlag.Application.Services;
 
 namespace IcbmikeBlag.Application.Repositories
 {
     public class BlogPostRepository : IBlogPostRepository
     {
         private readonly BlagContext _dbContext;
+        private readonly ITwitterService _twitterService;
 
-        public BlogPostRepository(BlagContext dbContext)
+        public BlogPostRepository(BlagContext dbContext, ITwitterService twitterService)
         {
             _dbContext = dbContext;
+            _twitterService = twitterService;
         }
 
         public IEnumerable<BlogPost> GetRecentBlogPosts(int numPosts = 10, int page = 1)
@@ -27,6 +30,8 @@ namespace IcbmikeBlag.Application.Repositories
             _dbContext.BlogPosts.Add(blogPost);
             _dbContext.SaveChanges();
 
+            //When we save a post also post a link to it on twitter
+            _twitterService.Post(blogPost);
         }
 
         public void UpdatePost(BlogPost blogPost)

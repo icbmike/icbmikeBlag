@@ -4,6 +4,7 @@ using Autofac;
 using Autofac.Integration.Mvc;
 using IcbmikeBlag.Application.DAL;
 using IcbmikeBlag.Application.Repositories;
+using IcbmikeBlag.Application.Services;
 
 namespace IcbmikeBlag
 {
@@ -22,6 +23,9 @@ namespace IcbmikeBlag
             builder.RegisterType<BlogPostRepository>().As<IBlogPostRepository>();
             builder.RegisterType<UserRepository>().As<IUserRepository>();
             
+            //Services
+            builder.RegisterType<TwitterService>().As<ITwitterService>();
+            builder.RegisterType<TwitterServiceSettings>().As<ITwitterServiceSettings>();
 
             DependencyResolver.SetResolver(new AutofacDependencyResolver(builder.Build()));
         }
